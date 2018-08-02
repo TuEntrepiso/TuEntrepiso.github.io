@@ -362,7 +362,7 @@ GMAIL-->
   </div>
   <p> Copyright © MueblesYProyectos 2018.   Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 
-  
+
     <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize_button" >Authorize</button>
     <button id="signout_button" >Sign Out</button>
@@ -486,21 +486,6 @@ GMAIL-->
  
 <!-- Add Google Maps -->
 <script>
-function myMap()
-{
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
 
 // Modal Image Gallery
 function onClick(element) {
