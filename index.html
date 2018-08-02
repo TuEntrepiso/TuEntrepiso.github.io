@@ -60,13 +60,31 @@
       }
   }
 
-  .portfolio-img{ 
-      min-height: 160px;
-  }
+	.portfolio-img{ 
+	  min-height: 160px;
+	}
 
+	.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+	}
+
+	.my-float{
+		margin-top: 14px;
+	    font-size: 34px;
+	}
 </style>
 <body>
-      
+
+
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
@@ -77,9 +95,9 @@
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> QUIENES SOMOS</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACTO</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+<!--    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
-    </a>
+    </a>-->
   </div>
 
   <!-- Navbar on small screens -->
@@ -115,37 +133,37 @@
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_1.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="The mist over the mountains">
+      <img src="fotos/Entrepiso_1.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
 
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_2.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Coffee beans">
+      <img src="fotos/Entrepiso_2.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
 
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_5.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Bear closeup">
+      <img src="fotos/Entrepiso_5.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
 
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_7.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Quiet ocean">
+      <img src="fotos/Entrepiso_7.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
   </div>
 
   <div class="w3-row-padding w3-center w3-section">
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_3.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="The mist">
+      <img src="fotos/Entrepiso_3.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
 
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_8.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="My beloved typewriter">
+      <img src="fotos/Entrepiso_8.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
 
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_4.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Empty ghost train">
+      <img src="fotos/Entrepiso_4.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
 
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_6.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Sailing">
+      <img src="fotos/Entrepiso_6.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
    	
    	<!--boton MAS
@@ -257,6 +275,10 @@
     </div>
   </div>
 </div>
+
+ <a href="#contact" class="w3-display-container float">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-hover-opacity-off">
