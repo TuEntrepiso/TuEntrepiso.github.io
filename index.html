@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=cyrillic">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16">
 <style>
   body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
@@ -294,16 +295,16 @@
       <p>No dudes de mandarnos cualquier consulta. Te contestaremos a la brevedad</p>
 
       <!--MAIL-->
-      <form action="mailto:leonardo_7@live.com.ar?subject=Email%20Subject&body=Body%20Text" method="post">
+      <form  onsubmit="return sendEmail();">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            <input id="compose-subject" class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
           </div>
           <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            <input id="compose-to" class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
           </div>
         </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <input id="compose-message" class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
         <button class="w3-button w3-black w3-right w3-section" type="submit">
           <i class="fa fa-paper-plane"></i> Enviar Mensaje
         </button>
@@ -322,8 +323,8 @@
 <footer class="w3-center w3-black w3-padding-64 w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Tu Entrepiso</a>
   <div class="w3-xlarge w3-section">
-    <a href="https://www.facebook.com/pg/Muebles-y-Proyectos-especiales-523828670967910/photos/?ref=page_internal"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <a href="https://servicio.mercadolibre.com.ar/MLA-729495276-entrepisos-de-madera-_JM">
+    <a target="_blank" href="https://www.facebook.com/pg/Muebles-y-Proyectos-especiales-523828670967910/photos/?ref=page_internal"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a target="_blank" href="https://servicio.mercadolibre.com.ar/MLA-729495276-entrepisos-de-madera-_JM">
     <i class="fa fa-handshake-o w3-hover-opacity"></i></a>
 
 <!--    <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -349,10 +350,10 @@
 
 
 
-<!--
 
-    <!~~Add buttons to initiate auth sequence and sign out~~>
-    <button id="authorize_button" style="display: none" >Authorize</button>
+
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize_button" hidden style="display: none" >Authorize</button>
     <button id="signout_button"  style="display: none" >Sign Out</button>
 
     <pre id="content"></pre>
@@ -377,8 +378,14 @@
        */
       function handleClientLoad() {
         gapi.load('client:auth2', initClient);
+		
+//de leo
+/*		gapi.load('client:auth2', () => {
+		    gapi.client.load('gmail', 'v1', () => {
+		      console.log('Loaded Gmail');
+		    });
+		}*/
       }
-
       /**
        *  Initializes the API client library and sets up sign-in state
        *  listeners.
@@ -465,13 +472,13 @@
 
     </script>
 
+
+
+
     <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
-
--->
-
 
 
 <!-- ////////////////////////////////////////    GMAIL         /////////////////////////7-->
@@ -520,6 +527,56 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
+
+
+
+
+// Add Google gmail api 
+
+function sendEmail()
+{
+  $('#send-button').addClass('disabled');
+
+  sendMessage(
+    {
+      'To': $('#compose-to').val(),
+      'Subject': $('#compose-subject').val()
+    },
+    $('#compose-message').val(),
+    composeTidy
+  );
+
+  return false;
+}
+
+function composeTidy()
+{
+	alert(1);
+}
+
+function sendMessage(headers_obj, message, callback)
+{
+  var email = '';
+
+  for(var header in headers_obj)
+    email += header += ": "+headers_obj[header]+"\r\n";
+
+  email += "\r\n" + message;
+
+  var sendRequest = gapi.client.gmail.users.messages.send({
+    'userId': 'me',
+    'resource': {
+      'raw': window.btoa(email).replace(/\+/g, '-').replace(/\//g, '_')
+    }
+  });
+  return sendRequest.execute(callback);
+}
+
+
+
+
+
 </script>
 
 <!--
