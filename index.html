@@ -65,6 +65,12 @@
   .w3-wide {letter-spacing: 10px;}
   .w3-hover-opacity {cursor: pointer;}
 
+  /* modal */
+  .myp-image {
+    max-width: 100%;
+    height: 450PX;
+ 	}
+
   /* Turn off parallax scrolling for tablets and phones */
   @media only screen and (max-device-width: 1024px) {
       .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -75,6 +81,8 @@
 	.portfolio-img{ 
 	  min-height: 160px;
 	}
+
+	/*  FAB ICON   */
 
 	.float{
 	position:fixed;
@@ -99,6 +107,48 @@
 	  animation-fill-mode: forwards;
 	}
 
+	/*  TOASTER   */
+	#snackbar {
+	    visibility: hidden;
+	    min-width: 250px;
+	    margin-left: -125px;
+	    background-color: #333;
+	    color: #fff;
+	    text-align: center;
+	    border-radius: 2px;
+	    padding: 16px;
+	    position: fixed;
+	    z-index: 1;
+	    left: 50%;
+	    bottom: 30px;
+	    font-size: 17px;
+	}
+
+	#snackbar.show {
+	    visibility: visible;
+	    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	}
+
+	@-webkit-keyframes fadein {
+	    from {bottom: 0; opacity: 0;} 
+	    to {bottom: 30px; opacity: 1;}
+	}
+
+	@keyframes fadein {
+	    from {bottom: 0; opacity: 0;}
+	    to {bottom: 30px; opacity: 1;}
+	}
+
+	@-webkit-keyframes fadeout {
+	    from {bottom: 30px; opacity: 1;} 
+	    to {bottom: 0; opacity: 0;}
+	}
+
+	@keyframes fadeout {
+	    from {bottom: 30px; opacity: 1;}
+	    to {bottom: 0; opacity: 0;}
+	}
 </style>
 <body>
 	<!--GOOGLE-->
@@ -146,7 +196,10 @@
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> QUIENES SOMOS</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACTO</a>
    <a href="#contact" class="w3-bar-item w3-button w3-hide-medium w3-right">
-      <i class="fa fa-phone fa-fw w3-hover-text-black"  style="font-size:20px" ></i>11 6145-7082</a>
+      <i class="fa fa-phone fa-fw w3-hover-text-black"  style="font-size:20px" ></i>
+  		<strong>
+  			11 6145-7082
+  		</strong></a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -222,32 +275,12 @@
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Cerrar Imagen"><i class="fa fa-remove"></i></span>
   <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
+    <img id="img01" class="myp-image">
     <p id="caption" class="w3-opacity w3-large"></p>
   </div>
 </div>
-
-<!-- Happy clients, ... -->
-<!--<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">14+</span><br>
-    Partners
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">55+</span><br>
-    Projects Done
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">89+</span><br>
-    Happy Clients
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150+</span><br>
-    Meetings
-  </div>
-</div>-->
 
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
@@ -290,39 +323,55 @@
   <p class="w3-center"><em>Tu consulta no molesta</em></p>
 
   <div class="w3-row w3-padding-32 w3-section">
-<!--    <div class="w3-col m4 w3-container">
-      <!~~ Add Google Maps ~~>
-      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
-    </div>-->
+
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Villa Crespo - Capital Federal<br>
         <i id="Telefono" class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 
-        +54 9 11 6145-7082<br>
+        <strong>
+        11 6145-7082<br>
+        </strong>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Villa Crespo - Capital Federal<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 
         mueblesyproyectosespeciales@hotmail.com<br>
       </div>
       <p>No dudes de mandarnos cualquier consulta. Te contestaremos a la brevedad</p>
 
-      <!--MAIL-->
-      <form  onsubmit="return sendEmail();">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input id="compose-subject" class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-          </div>
-          <div class="w3-half">
-            <input id="compose-to" class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-          </div>
-        </div>
-        <input id="compose-message" class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
+      <p>Se requiere inicio de seción con una cuenta google para enviar desde la página</p>
+        <button id="authorize_button" 
+        onclick="document.getElementById('modalmail').style.display='block'; document.getElementById('authorize_button').style.display='none'; " class="w3-button w3-black w3-right w3-section" >
           <i class="fa fa-paper-plane"></i> Enviar Mensaje
         </button>
-      </form>
+
+
+		<!-- Modal for full size images on click   onclick="this.style.display='none'" -->
+		<div id="modalmail" class="" style="display: none" >
+		  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+
+		      <!--MAIL-->
+		      <form  onsubmit="return sendEmail();">
+		        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+		          <div class="w3-half">
+		            <input id="compose-subject" class="w3-input w3-border" type="text" placeholder="Nombre" required name="Name">
+		          </div>
+		          <div class="w3-half">
+		            <input id="compose-to" class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+		          </div>
+		        </div>
+		        <input id="compose-message" class="w3-input w3-border" type="text" placeholder="Mensaje" required name="Message">
+		        <button class="w3-button w3-black w3-right w3-section" type="submit">
+		          <i class="fa fa-paper-plane"></i> Enviar Mensaje
+		        </button>
+		      </form>
+		  </div>
+		</div>
+
+		<div id="snackbar">Mail Enviado</div>
 
     </div>
   </div>
 </div>
+
+
 
 	<!--WHATSAPP ICON-->
  <a id="container-floating" href="#contact" class="w3-display-container float">
@@ -331,17 +380,12 @@
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Tu Entrepiso</a>
   <div class="w3-xlarge w3-section">
     <a target="_blank" href="https://www.facebook.com/pg/Muebles-y-Proyectos-especiales-523828670967910/photos/?ref=page_internal"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
     <a target="_blank" href="https://servicio.mercadolibre.com.ar/MLA-729495276-entrepisos-de-madera-_JM">
     <i class="fa fa-handshake-o w3-hover-opacity"></i></a>
-
-<!--    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>-->
   </div>
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Tu Entrepiso</a>
   <p> Copyright © MueblesYProyectos 2018.   Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 
 
@@ -363,8 +407,8 @@
 
 
     <!--Add buttons to initiate auth sequence and sign out-->
-    <button id="authorize_button" hidden style="display: none" >Authorize</button>
-    <button id="signout_button"  style="display: none" >Sign Out</button>
+<!--    <button id="authorize_button" hidden style="display: none" >Authorize</button>
+-->    <button id="signout_button"  style="display: none" >Sign Out</button>
 
     <pre id="content"></pre>
 
@@ -563,7 +607,11 @@ function sendEmail()
 
 function composeTidy()
 {
-	alert(1);
+	document.getElementById('modalmail').style.display='none'; 
+	document.getElementById('authorize_button').style.display='block'; 
+ 	var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 
 function sendMessage(headers_obj, message, callback)
