@@ -475,7 +475,7 @@ function sendEmail()
 {
   $('#send-button').addClass('disabled');
   let subject = 'TuEntrepiso - '+$('#compose-subject').val();
-  let msg = $('#compose-to').val()' - '+$('#compose-message').val();
+  let msg = $('#compose-to').val()+' - '+$('#compose-message').val();
   sendMessage(
     {
       'To': 'mueblesyproyectosespeciales@hotmail.com',
