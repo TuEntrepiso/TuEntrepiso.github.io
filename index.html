@@ -199,7 +199,7 @@
       <div class="w3-large w3-margin-bottom">
         <i id="Telefono" class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 
         <strong>
-        11 6145-7082<br>
+        Teléfono: 11 6145-7082<br>
         </strong>
         <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Villa Crespo - Capital Federal<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 
@@ -211,7 +211,7 @@
         <button id="authorize_button" 
         onclick="
          document.getElementById('authorize_button').style.display='none'; " class="w3-button w3-black w3-right w3-section" >
-          <i class="fa fa-paper-plane"></i> Enviar Mensaje
+          <i class="fa fa-paper-plane"></i> Loggearse y Enviar Mensaje
         </button>
 
 
@@ -245,9 +245,15 @@
 
 
 
+	<!--Facebook ICON-->
+ <a target="_blank"  id="container-floating-fb" href="https://www.facebook.com/pg/Muebles-y-Proyectos-especiales-523828670967910/photos/?ref=page_internal" 
+ class="w3-display-container float fb">
+	<i id="fb" class="fa fa-facebook-official my-float"></i>
+</a>
+
 	<!--WHATSAPP ICON-->
- <a id="container-floating" href="#contact" class="w3-display-container float">
-<i id="wpp" class="fa fa-whatsapp my-float"></i>
+ <a id="container-floating" href="#contact" class="w3-display-container float wpp">
+	<i id="wpp" class="fa fa-whatsapp my-float"></i>
 </a>
 
 <!-- Footer -->
@@ -468,13 +474,14 @@ function toggleFunction() {
 function sendEmail()
 {
   $('#send-button').addClass('disabled');
-
+  let subject = 'TuEntrepiso - '+$('#compose-subject').val();
+  let msg = $('#compose-to').val()' - '+$('#compose-message').val();
   sendMessage(
     {
-      'To': $('#compose-to').val(),
-      'Subject': $('#compose-subject').val()
+      'To': 'mueblesyproyectosespeciales@hotmail.com',
+      'Subject': subject
     },
-    $('#compose-message').val(),
+    msg,
     composeTidy
   );
 

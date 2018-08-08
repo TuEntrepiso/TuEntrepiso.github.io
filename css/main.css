@@ -67,9 +67,7 @@
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:40px;
 	right:40px;
-	background-color:#0C9;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
@@ -81,11 +79,24 @@
 	    font-size: 34px;
 	}
 
+	.fb{
+		margin-top: 50px;
+		bottom:120px;
+		background-color: #3f4ca9;
+	}
+	.wpp{
+		margin-top: 50px;
+		bottom:40px;
+		background-color:#0C9;
+	}
 	#container-floating:hover .plus{
 	  animation: plus-in 0.15s linear;
 	  animation-fill-mode: forwards;
 	}
-
+	#container-floating-fb:hover .plus{
+	  animation: plus-in 0.15s linear;
+	  animation-fill-mode: forwards;
+	}
 	/*  TOASTER   */
 	#snackbar {
 	    visibility: hidden;
