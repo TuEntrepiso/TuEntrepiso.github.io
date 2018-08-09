@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>Tu Entrepiso</title>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123383467-1"></script>
@@ -21,7 +22,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16">
 
-<body>
 	<!--GOOGLE-->
 <script type="application/ld+json">
 {
@@ -48,13 +48,11 @@
 }
 </script>
 
+</head>
+<body>
 
-
-
-
-
-
-
+<!--////////////////////////////////////////////////7-->
+<!--HEADER!!!!!!!!-->
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -68,9 +66,9 @@
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACTO</a>
    <a href="#contact" class="w3-bar-item w3-button w3-hide-medium w3-right">
       <i class="fa fa-phone fa-fw w3-hover-text-black"  style="font-size:20px" ></i>
-  		<strong>
-  			11 6145-7082
-  		</strong></a>
+      <strong>
+        11 6145-7082
+      </strong></a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -86,11 +84,14 @@
   <div class="w3-display-middle" style="/*white-space:nowrap;*/">
     <span class="w3-center w3-black w3-xlarge w3-animate-opacity" style="font-size: 425%!important; " >
 <i class="fa fa-home"></i>
-    	TuEntrepiso 
+      TuEntrepiso 
       <h4 class="w3-center">MUEBLES Y PROYECTOS ESPECIALES</h4>
     </span>
   </div> <!--  w3-padding-large w3-wide  -->
 </div>
+<!--fin    HEADER!!!!!!!!-->
+<!--////////////////////////////////////////////////7-->
+
 
 
 <!-- Container (Portfolio Section) -->
@@ -138,9 +139,9 @@
       <img src="fotos/Entrepiso_6.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
    	
-   	<!--boton MAS
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">MAS</button>-->
-  
+   	<!--boton MAS-->
+
+     <a href="portfolio.html" style="margin-top:64px!important;" class="w3-button w3-black"><i class="fa fa-plus w3-margin-right"></i>Ver mas</a>
   </div>
 </div>
 
@@ -256,7 +257,10 @@
 	<i id="wpp" class="fa fa-whatsapp my-float"></i>
 </a>
 
+<!--/////////////////////////////////////////////////-->
 <!-- Footer -->
+<!--/////////////////////////////////////////////////-->
+
 <footer class="w3-center w3-black w3-padding-64 w3-hover-opacity-off">
   <div class="w3-xlarge w3-section">
     <a target="_blank" href="https://www.facebook.com/pg/Muebles-y-Proyectos-especiales-523828670967910/photos/?ref=page_internal"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
@@ -266,6 +270,9 @@
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Tu Entrepiso</a>
   <p> Copyright © MueblesYProyectos 2018.   Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 
+<!--/////////////////////////////////////////////////-->
+<!-- Footer -->
+<!--/////////////////////////////////////////////////-->
 
 
 
@@ -348,10 +355,12 @@
         if (isSignedIn) {
           authorizeButton.style.display = 'none';
           signoutButton.style.display = 'block';
+          document.getElementById('modalmail').style.display='block';
         //  listLabels();
         } else {
           authorizeButton.style.display = 'block';
           signoutButton.style.display = 'none';
+          document.getElementById('modalmail').style.display='none';
         }
       }
 
