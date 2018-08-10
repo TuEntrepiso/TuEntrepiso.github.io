@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="css/main.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16">
+ <script src="js/main.js"></script>
 
   <!--GOOGLE-->
 <script type="application/ld+json">
@@ -56,6 +57,7 @@
     <a href="index#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> QUIENES SOMOS</a>
     <a href="index#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACTO</a>
    <a href="index#contact" class="w3-bar-item w3-button w3-hide-medium w3-right">
+      Solicitá Presupuesto
       <i class="fa fa-phone fa-fw w3-hover-text-black"  style="font-size:20px" ></i>
       <strong>
         11 6145-7082
@@ -112,8 +114,9 @@
 
 
   <h3 class="w3-center">Solicitá presupuesto llamando al Teléfono: 11 6145-7082</h3>
-
-
+  <h5 class="w3-center">
+    O envianos un mail a mueblesyproyectosespeciales@hotmail.com y te contestaremos a la brevedad <br>
+  </h5>
 
 
 
@@ -130,7 +133,7 @@
 <script>
 
   function loadImgs(element) {
-    for (var i = 1; i <=8; i++) {
+    for (var i = 1; i <=11; i++) {
        
      var img = $( "#template" ).clone();
        img.attr('src',"fotos/Entrepiso_"+i+".jpg");
@@ -145,15 +148,9 @@
       $( "#imgContainter" ).append( div);
     }
   }
-  loadImgs();loadImgs();
+  loadImgs();
 
-  // Modal Image Gallery
-  function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
-    var captionText = document.getElementById("caption");
-    captionText.innerHTML = element.alt;
-  }
+
 </script>
 
 <!--/////////////////////////////////////////////////-->
