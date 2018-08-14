@@ -4,6 +4,28 @@ function onClick(element) {
   document.getElementById("modal01").style.display = "block";
 //  var captionText = document.getElementById("caption");
 //  captionText.innerHTML = element.alt;
+      
+  $( "#img01" ).attr('index',element.getAttribute('index'));
+}
+
+function left(){
+
+  var element = $( "#img01" );
+  var index = parseInt(element.attr('index'),10);
+  index = index-1;
+  if(index<=1)index=MAX_ELEMENTS;
+  element.attr('src',"fotos/Entrepiso_"+index+".jpg");
+  element.attr('index',index);
+}
+
+function right(){
+
+  var element = $( "#img01" );
+  var index = parseInt(element.attr('index'),10);
+  if(index>=MAX_ELEMENTS)index= 0;
+  index = index+1;
+  element.attr('src',"fotos/Entrepiso_"+index+".jpg");
+  element.attr('index',index);
 }
 
 // Change style of navbar on scroll

@@ -110,6 +110,12 @@
   <i id="fb" class="fa fa-facebook-official my-float"></i>
 </a>
 
+ <!--Mercado libre ICON-->
+ <a target="_blank"  id="container-floating-fb" href="https://servicio.mercadolibre.com.ar/MLA-729495276-entrepisos-de-madera-_JM" 
+ class="w3-display-container float meli">
+  <i id="meli" class="fa fa-handshake-o my-float"></i>
+</a>
+
   <!--WHATSAPP ICON-->
  <a id="container-floating" href="index#contact" class="w3-display-container float wpp">
   <i id="wpp" class="fa fa-whatsapp my-float"></i>
@@ -125,22 +131,35 @@
 
 
 <!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Cerrar Imagen"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+<div id="modal01" class="w3-modal w3-black" >
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Cerrar Imagen"
+  onclick="$('#modal01').hide()"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
+  onclick="$('#modal01').hide()">
     <img id="img01" class="myp-image">
     <p id="caption" class="w3-opacity w3-large"></p>
   </div>
+
+    <!-- Left and right controls -->
+   <a id="left-container" onclick="left()" class="w3-display-container float left-btn">
+  <i id="left-btn" class="fa fa-chevron-left  my-float"></i>
+  </a>
+
+   <a id="left-container" onclick="right()" class="w3-display-container float right-btn">
+  <i id="right-btn" class="fa fa-chevron-right  my-float"></i>
+  </a>
 </div>
 
 <script>
 
+  var MAX_ELEMENTS = 11;
   function loadImgs(element) {
-    for (var i = 1; i <=11; i++) {
+    for (var i = 1; i <=MAX_ELEMENTS; i++) {
        
      var img = $( "#template" ).clone();
        img.attr('src',"fotos/Entrepiso_"+i+".jpg");
        img.attr('height',"235px");
+       img.attr('index',i);
     //   img.attr('padding',"2px");
 
       img.removeAttr('hidden');

@@ -84,7 +84,7 @@
 </div>
 
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+<div aria-label="Entrepiso CABA" class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="/*white-space:nowrap;*/">
     <span class="w3-center w3-xlarge w3-animate-opacity" style="font-size: 425%!important; " >
 <i class="fa fa-home"></i>
@@ -110,37 +110,37 @@
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_1.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
+      <img index="1" src="fotos/Entrepiso_1.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
 
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_2.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
+      <img index="1" src="fotos/Entrepiso_2.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Entrepiso de madera Lomas de Zamora">
     </div>
 
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_5.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
+      <img index="1" src="fotos/Entrepiso_5.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
 
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_7.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
+      <img index="1" src="fotos/Entrepiso_7.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
   </div>
 
   <div class="w3-row-padding w3-center w3-section">
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_3.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
+      <img index="1" src="fotos/Entrepiso_3.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
 
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_8.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
+      <img index="1" src="fotos/Entrepiso_8.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
 
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_4.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
+      <img index="1" src="fotos/Entrepiso_4.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
 
     <div class="w3-col m3">
-      <img src="fotos/Entrepiso_6.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
+      <img src="fotos/Entrepiso_6.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hoindex="1" ver-opacity" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     </div>
    	
    	<!--boton MAS-->
@@ -156,6 +156,8 @@
     <img id="img01" class="myp-image">
     <p id="caption" class="w3-opacity w3-large"></p>
   </div>
+
+
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
@@ -237,9 +239,9 @@
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 
         mueblesyproyectosespeciales@hotmail.com<br>
       </div>
-      <p>No dudes de mandarnos cualquier consulta. Te contestaremos a la brevedad</p>
+      <p>No dudes de mandarnos cualquier consulta. Te contestaremos a la brevedad.</p>
 
-      <p>Se requiere inicio de seción con una cuenta google para enviar desde la página</p>
+      <p>Se requiere inicio de sesión con una cuenta google para enviar desde la página.</p>
         <button id="authorize_button" 
         onclick="
          document.getElementById('authorize_button').style.display='none'; " class="w3-button w3-black w3-right w3-section" >
@@ -269,12 +271,13 @@
 		  </div>
 		</div>
 
-		<div id="snackbar">Mail Enviado</div>
 
     </div>
   </div>
 </div>
 
+		<div class="snackbar" id="mail-snackbar" >Mail Enviado</div>
+    <div class="snackbar" id="wpp-snackbar" >Solicitá presupuesto llamando al Teléfono: 11 6145-7082</div>
 
 
 	<!--Facebook ICON-->
@@ -282,9 +285,15 @@
  class="w3-display-container float fb">
 	<i id="fb" class="fa fa-facebook-official my-float"></i>
 </a>
+ 
+  <!--Mercado libre ICON-->
+ <a target="_blank"  id="container-floating-fb" href="https://servicio.mercadolibre.com.ar/MLA-729495276-entrepisos-de-madera-_JM" 
+ class="w3-display-container float meli">
+  <i id="meli" class="fa fa-handshake-o my-float"></i>
+</a>
 
 	<!--WHATSAPP ICON-->
- <a id="container-floating" href="#contact" class="w3-display-container float wpp">
+ <a id="container-floating" href="#contact" class="w3-display-container float wpp" onclick="showWpp();">
 	<i id="wpp" class="fa fa-whatsapp my-float"></i>
 </a>
 
@@ -400,9 +409,16 @@
        *  Sign in the user upon button click.
        */
       function handleAuthClick(event) {
-        gapi.auth2.getAuthInstance().signIn();
+        var promise = gapi.auth2.getAuthInstance().signIn();
         //de leo
-        document.getElementById('modalmail').style.display='block';
+        promise.then(
+          function(success){
+            document.getElementById('modalmail').style.display='block';
+            console.log(JSON.stringify({message: "success", value: success}));
+        },
+        function(fail){
+          console.log(JSON.stringify({message: "fail", value: fail}));
+        }); 
       }
 
       /**
@@ -501,8 +517,15 @@ function composeTidy()
 {
 	document.getElementById('modalmail').style.display='none'; 
 	document.getElementById('authorize_button').style.display='block'; 
- 	var x = document.getElementById("snackbar");
-    x.className = "show";
+ 	var x = document.getElementById("mail-snackbar");
+    x.className = x.className+" show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+function showWpp()
+{
+  var x = document.getElementById("wpp-snackbar");
+    x.className = x.className+" show";
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 

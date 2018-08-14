@@ -81,13 +81,34 @@
 
 	.fb{
 		margin-top: 50px;
-		bottom:120px;
+		bottom:200px;
 		background-color: #3f4ca9;
 	}
 	.wpp{
 		margin-top: 50px;
 		bottom:40px;
 		background-color:#0C9;
+	}
+	.right-btn{
+		margin-top: 50px;
+		bottom:50%;
+		background-color:#000;
+        box-shadow: 2px 2px 3px #000;
+	}
+	.left-btn{
+		margin-top: 50px;
+		bottom:50%;
+		background-color:#000;
+        margin-right: 90%;
+        box-shadow: 2px 2px 3px #000;
+	}
+	.meli{
+		/*background-image: url(https://http2.mlstatic.com/ui/navigation/4.0.3/mercadolibre/logo__large_plus.png);
+    */
+		margin-top: 50px;
+		bottom:120px;
+		background-color:#fff159;
+		color: #2d278e;
 	}
 	#container-floating:hover .plus{
 	  animation: plus-in 0.15s linear;
@@ -98,7 +119,7 @@
 	  animation-fill-mode: forwards;
 	}
 	/*  TOASTER   */
-	#snackbar {
+	.snackbar {
 	    visibility: hidden;
 	    min-width: 250px;
 	    margin-left: -125px;
@@ -114,7 +135,7 @@
 	    font-size: 17px;
 	}
 
-	#snackbar.show {
+	.snackbar.show {
 	    visibility: visible;
 	    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
 	    animation: fadein 0.5s, fadeout 0.5s 2.5s;
