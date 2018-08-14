@@ -172,6 +172,22 @@
   }
   loadImgs();
 
+  $(document).keydown(function( event ) {
+    if ( event.keyCode == 13 ) {
+       event.preventDefault();
+    }  
+    if ( event.keyCode == 37 ) {
+       left();
+    }
+
+    if ( event.keyCode == 39 ) {
+       right();
+    }
+    if ( event.keyCode == 27 ) {
+       $('#modal01').hide()
+    }
+  });
+
 
 </script>
 
