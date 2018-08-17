@@ -1,17 +1,46 @@
+<meta http-equiv="Cache-Control" content="max-age=3600,public">
 <!DOCTYPE html>
 <html>
 <head>
-<title>Entrepisos CABA</title>
+<title>Entrepisos CABA y GBA</title>
   
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Entrepisos a medida Lomas de Zamora. Banfield. Lanus. Entrepiso de madera y hierro Capital Federal. Entrepiso CABA. Entrepiso GBA. entrepiso precios accesibles">
+<meta name="author" content="Leonardo Rocca">
+<!--
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=cyrillic">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16">
  <script src="js/main-min.js" async></script>
-<link rel="stylesheet" async href="css/main-min.css">
+
+
+<!--CSS PRINCIPAL-->  
+<style type="text/css">
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v5/L0x5DF4xlVMF-BfR8bXMIjhPq3-OXg.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+       color: #FFF;
+    background-image: url('fotos/Entrepiso_principal.jpg');
+    min-height: 70%;
+    text-shadow: 0px -2px 17px #000000;
+}
+
+</style>
 
   <!--GOOGLE-->
 <script type="application/ld+json">
@@ -53,6 +82,33 @@
 
 </head>
 <body>
+  <noscript id="deferred-styles">
+    <link rel="stylesheet" type="text/css" href="css/main-min.css"/>
+  </noscript>
+
+  <noscript id="deferred-font-a-styles">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  </noscript>
+  <script>
+    var loadDeferredStyles = function(id) {
+      var addStylesNode = document.getElementById(id);
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles("deferred-font-a-styles"), 0); });
+    else window.addEventListener('load', loadDeferredStyles("deferred-font-a-styles"));
+
+
+    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles("deferred-styles"), 0); });
+    else window.addEventListener('load', loadDeferredStyles("deferred-styles"));
+
+  </script>
 
 <!--////////////////////////////////////////////////7-->
 <!--HEADER!!!!!!!!-->
