@@ -102,6 +102,13 @@ h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
   </noscript>
   <script>
+
+    //redirect index.html
+    var url_string = window.location.href;
+    if (url_string.length>39 && url_string.search("#")==-1 ) {
+      window.location.replace("https://tuentrepiso.github.io/portfolio");
+    }
+
     var loadDeferredStyles = function(id) {
       var addStylesNode = document.getElementById(id);
       var replacement = document.createElement("div");
@@ -131,7 +138,7 @@ h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="index" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Tu Entrepiso</a>
+    <a href="https://tuentrepiso.github.io/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Tu Entrepiso</a>
     <a href="index#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="index#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> QUIENES SOMOS</a>
     <a href="index#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACTO</a>
