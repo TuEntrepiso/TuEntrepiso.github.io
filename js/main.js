@@ -1,6 +1,7 @@
 // Modal Image Gallery
 function onClick(element) {
-  document.getElementById("img01").src = element.src;
+// document.getElementById("img01").src = element.src;
+  document.getElementById("img01").src = "fotosBKP/Entrepiso_"+element.getAttribute('index')+".jpg";
   document.getElementById("modal01").style.display = "block";
 //  var captionText = document.getElementById("caption");
 //  captionText.innerHTML = element.alt;
@@ -13,8 +14,8 @@ function left(){
   var element = $( "#img01" );
   var index = parseInt(element.attr('index'),10);
   index = index-1;
-  if(index<=1)index=MAX_ELEMENTS;
-  element.attr('src',"fotos/Entrepiso_"+index+".jpg");
+  if(index<1)index=MAX_ELEMENTS;
+  element.attr('src',"fotosBKP/Entrepiso_"+index+".jpg");
   element.attr('index',index);
 }
 
