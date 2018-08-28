@@ -25,7 +25,7 @@ function right(){
   var index = parseInt(element.attr('index'),10);
   if(index>=MAX_ELEMENTS)index= 0;
   index = index+1;
-  element.attr('src',"fotos/Entrepiso_"+index+".jpg");
+  element.attr('src',"fotosBKP/Entrepiso_"+index+".jpg");
   element.attr('index',index);
 }
 
