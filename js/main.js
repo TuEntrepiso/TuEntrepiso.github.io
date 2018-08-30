@@ -1,3 +1,6 @@
+var alts = ["Imagen de entrepiso de madera y hierro en Capital Federal (CABA)",
+            "Entrepiso Banfield",
+            "Entrepiso de madera Lomas de Zamora"];
 // Modal Image Gallery
 function onClick(element) {
 // document.getElementById("img01").src = element.src;
