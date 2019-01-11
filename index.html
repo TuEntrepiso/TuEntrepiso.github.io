@@ -51,7 +51,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=cyrillic">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 -->
-<script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!--<link rel="shortcut icon" href="fotos/favicon.png" type="image/x-icon">-->
  <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16">
@@ -385,12 +384,15 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
         Podés encontrar los <strong>comentarios</strong> en nuestra página de  
         <a target="_blank" class="meli" 
         href="https://servicio.mercadolibre.com.ar/MLA-740604996-entrepisos-de-madera-y-hierro-_JM" > Mercado libre TuEntrepiso</a>
+
+<!--meli selection-->
+<!--///////////////////////////////////////////////////////-->
+     <div id="includedContent"></div>
+<!--meli selection-->
+<!--///////////////////////////////////////////////////////-->
+
       </p>
-	      
-      <button style=" background-image: url('fotos/opiniones.JPG'); width:80% ;height:492px" 
-      onclick=" window.open('https://servicio.mercadolibre.com.ar/noindex/catalog/reviews/MLA740604996?noIndex=true&amp;itemId=MLA740604996&amp;contextual=true&amp;access=view_all');" 
-      class=" w3-hide-small w3-hover-opacity" target="_blank"  title="Ver todas las opiniones" alt="Ver todas las opiniones"
-       ></button>	      
+	    
 </div>
 </div>
 
@@ -757,5 +759,11 @@ To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 -->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("opiniones-preview.html"); 
+    });
+    </script> 
 </body>
 </html>
