@@ -51,7 +51,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=cyrillic">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!--<link rel="shortcut icon" href="fotos/favicon.png" type="image/x-icon">-->
  <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16">
  <script src="js/main-min.js" async></script>
@@ -159,7 +158,13 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
   <noscript id="deferred-font-a-styles">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
   </noscript>
+	
+  <noscript id="deferred-material-styles">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet">
+  </noscript>
+	
   <script>
+	  
     //redirect index.html
     var url_string = window.location.href;
     if (url_string.length>32 && url_string.search("#")==-1 ) {
@@ -178,12 +183,11 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
     if (raf) raf(function() { window.setTimeout(loadDeferredStyles("deferred-font-a-styles"), 0); });
     else window.addEventListener('load', loadDeferredStyles("deferred-font-a-styles"));
 
-
-    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
     if (raf) raf(function() { window.setTimeout(loadDeferredStyles("deferred-styles"), 0); });
     else window.addEventListener('load', loadDeferredStyles("deferred-styles"));
-
+    
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles("deferred-material-styles"), 0); });
+    else window.addEventListener('load', loadDeferredStyles("deferred-material-styles"));
   </script>
 
 <!--////////////////////////////////////////////////7-->
