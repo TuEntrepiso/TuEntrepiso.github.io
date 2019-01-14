@@ -269,8 +269,11 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   }
 
   /* Second image (Portfolio) */
+ .no-webp .bgimg-2 {  background-image: url('../fotos/Entrepiso_principal.jpg');}
+ .webp .bgimg-2 {   background-image: url('../fotos/Entrepiso_principal.webp');}
+
   .bgimg-2 {
-      background-image: url("../fotos/Entrepiso_principal.jpg");
+    /*  background-image: url("../fotos/Entrepiso_principal.jpg");*/
       min-height: 400px;
       text-shadow: 0px -2px #000000;
   }
