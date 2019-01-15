@@ -240,14 +240,22 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
 <!--Template img -->
 
-  <div id="imgContainter" class="w3-row-padding w3-center">
+<div id="imgContainter" class="w3-row-padding w3-center">
 
     <div hidden="true" id="templateContainer" class="w3-col m3">
-     </div>
-        <img hidden="true" id="template" src="fotos/Entrepiso_3.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity"  title="Imagen de entrepiso de madera y hierro en Capital Federal CABA Lomas de Zamora Banfield Lanus escalada"
+    </div>
+    <img hidden="true" id="template" src="fotos/Entrepiso_3.jpg" style="width:100%" 
+         class="portfolio-img "
+         title="Imagen de entrepiso de madera y hierro en Capital Federal CABA Lomas de Zamora Banfield Lanus escalada"
          alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
+    
+    <div hidden="true" id="hovereContainer" class="hovereffect" style="width:100%" onclick="onClick(this)">
+            <div class="overlay">
+                <h2>TuEntrepiso</h2>
+                <p>Ver Foto</p>
+            </div>
+    </div>
 </div>
-
 
 
   <!--Facebook ICON-->
@@ -297,10 +305,10 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
 
 <!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" >
-  <span class="w3-button w3-large w3-display-topright" title="Cerrar Imagen" style="background-color: red;"
+<div id="modal01" class="w3-modal" >
+  <span class="w3-button w3-large w3-display-topright w3-black" title="Cerrar Imagen" 
   onclick="$('#modal01').hide()"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent "
   onclick="$('#modal01').hide()">
     <img id="img01" class="myp-image">
     <p id="caption" class="w3-opacity w3-large"></p>
@@ -322,19 +330,27 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
   var MAX_ELEMENTS = 11;
   function loadImgs(element) {
     for (var i = 1; i <=MAX_ELEMENTS; i++) {
-       
-     var img = $( "#template" ).clone();
-       img.attr('src',"fotos/Entrepiso_"+i+".jpg");
-       img.attr('height',"235px");
-       img.attr('index',i);
-    //   img.attr('padding',"2px");
 
-      img.removeAttr('hidden');
-     var div = $( "#templateContainer" ).clone();
-      div.removeAttr('hidden');
-      div.append( img);
+	var img = $("#template").clone();
+        img.attr('src', "fotos/Entrepiso_" + i + ".jpg");
+        img.attr('height',"235px"); //TODO: PASAR ESTA LINEA A CADA PAGINA
+        img.attr('index', i);
+        //   img.attr('padding',"2px");
 
-      $( "#imgContainter" ).append( div);
+        img.removeAttr('hidden');
+        img.removeAttr('id');
+        var divHovere = $("#hovereContainer").clone();
+        divHovere.attr('index', i);
+        divHovere.removeAttr('id');
+        divHovere.removeAttr('hidden');
+        divHovere.prepend(img);
+
+        var div = $("#templateContainer").clone();
+        div.removeAttr('hidden');
+        div.removeAttr('id');
+        div.append(divHovere);
+
+        $("#imgContainter").append(div);
     }
   }
   loadImgs();
