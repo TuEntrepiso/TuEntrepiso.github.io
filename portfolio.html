@@ -42,7 +42,6 @@ ga('send', 'pageview');
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 -->
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16">
  <script src="js/main-min.js" async></script>
 
@@ -145,6 +144,10 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
 </head>
 <body>
+  <noscript id="deferred-material-styles">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet">
+  </noscript>
+
   <noscript id="deferred-styles">
     <link rel="stylesheet" type="text/css" href="css/main-min.css"/>
   </noscript>
@@ -159,7 +162,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
       window.location.replace("https://tuentrepiso.github.io/portfolio");
     }
 
-    var loadDeferredStyles = function(id) {
+      var loadDeferredStyles = function(id) {
       var addStylesNode = document.getElementById(id);
       var replacement = document.createElement("div");
       replacement.innerHTML = addStylesNode.textContent;
@@ -171,11 +174,11 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
     if (raf) raf(function() { window.setTimeout(loadDeferredStyles("deferred-font-a-styles"), 0); });
     else window.addEventListener('load', loadDeferredStyles("deferred-font-a-styles"));
 
-
-    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
     if (raf) raf(function() { window.setTimeout(loadDeferredStyles("deferred-styles"), 0); });
     else window.addEventListener('load', loadDeferredStyles("deferred-styles"));
+
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles("deferred-material-styles"), 0); });
+    else window.addEventListener('load', loadDeferredStyles("deferred-material-styles"));
 
   </script>
 
