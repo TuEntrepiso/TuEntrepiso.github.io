@@ -280,11 +280,11 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
      <!--boton VER MAS-->
         <!--VER MAS ICON-->
-      <div class=" w3-center" id="plusContainer">
+      <div class=" w3-center" id="plusContainer" onclick="loadMoreImgs()" >
           <h2>
           Ver mas fotos
           </h2>
-         <a target="_blank"  title="Ver mas fotos" onclick="loadMoreImgs()" class=" w3-button primaryFabicon ">
+         <a target="_blank"  title="Ver mas fotos" class=" w3-button primaryFabicon ">
           <i class="fa fa-plus plus"></i>
         </a>
       </div >
@@ -372,7 +372,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
   function loadMoreImgs() {
     $("#plusContainer").attr('hidden', true);
     $("#plusOnFbContainer").removeAttr('hidden');
-    loadImgs(FIRST_ELEMENTS,MAX_ELEMENTS);
+    loadImgs(FIRST_ELEMENTS+1,MAX_ELEMENTS);
   }
 
   $(document).keydown(function( event ) {
