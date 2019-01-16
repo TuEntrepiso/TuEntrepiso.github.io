@@ -279,8 +279,18 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 </a>
 
      <!--boton VER MAS-->
-  
-      <div class=" w3-center ">
+        <!--VER MAS ICON-->
+      <div class=" w3-center" id="plusContainer">
+          <h2>
+          Ver mas fotos
+          </h2>
+         <a target="_blank"  title="Ver mas fotos" onclick="loadMoreImgs()" class=" w3-button primaryFabicon ">
+          <i class="fa fa-plus plus"></i>
+        </a>
+      </div >
+        
+	<!--VER MAS btn-->
+      <div class=" w3-center " id="plusOnFbContainer" hidden="true">
         <p>Podrás encontrar mas fotos en nuestra página de facebook (muebles y proyectos especiales)</p>
          <a target="_blank" title="Facebook TuEntrepiso" href="https://www.facebook.com/pg/Muebles-y-Proyectos-especiales-523828670967910/photos/?ref=page_internal" style="margin-bottom: 10px;"
           class="w3-button primary "><i class="fa fa-facebook-official w3-margin-right"></i>VER MAS FOTOS</a>
@@ -308,7 +318,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
 
 <!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal" >
+<div id="modal01" class="w3-modal" style=" background-color: rgba(0, 0, 0, 0.71);" >
   <span class="w3-button w3-large w3-display-topright w3-black" title="Cerrar Imagen" 
   onclick="$('#modal01').hide()"><i class="fa fa-remove"></i></span>
   <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent "
@@ -330,12 +340,12 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 
-  //var MAX_ELEMENTS = 48;
-  var MAX_ELEMENTS = 28;
-  function loadImgs(element) {
-    for (var i = 1; i <=MAX_ELEMENTS; i++) {
+  var MAX_ELEMENTS = 48;
+  var FIRST_ELEMENTS = 16;
+  function loadImgs(position,offset) {
+    for (var i = position; i <=offset; i++) {
 
-	var img = $("#template").clone();
+	      var img = $("#template").clone();
         img.attr('src', "fotos/Entrepiso_" + i + ".jpg");
         img.attr('height',"235px"); //TODO: PASAR ESTA LINEA A CADA PAGINA
         img.attr('index', i);
@@ -357,7 +367,13 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
         $("#imgContainter").append(div);
     }
   }
-  loadImgs();
+  loadImgs(1,FIRST_ELEMENTS);
+
+  function loadMoreImgs() {
+    $("#plusContainer").attr('hidden', true);
+    $("#plusOnFbContainer").removeAttr('hidden');
+    loadImgs(FIRST_ELEMENTS,MAX_ELEMENTS);
+  }
 
   $(document).keydown(function( event ) {
     if ( event.keyCode == 13 ) {
@@ -377,7 +393,6 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
 
 </script>
-
 <!--/////////////////////////////////////////////////-->
 <!-- Footer -->
 <!--/////////////////////////////////////////////////-->
