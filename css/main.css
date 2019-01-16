@@ -325,6 +325,22 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 	box-shadow: 2px 2px 3px #999;
 	}
 
+	.primaryFabicon{
+	width:60px;
+	height:60px;
+	right:40px;
+	color: #fff!important;
+	 background-color: #01579B!important;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+	}
+
+	.plus{
+		margin-top: 8px;
+	    font-size: 34px;
+	}
+
 	.my-float{
 		margin-top: 14px;
 	    font-size: 34px;
