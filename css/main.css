@@ -316,6 +316,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 	}
 	/*  FAB ICON   */
 
+	/*box-shadow: 2px 2px 3px #999;*/
 	.float{
 	position:fixed;
 	width:60px;
@@ -324,12 +325,12 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
-	box-shadow: 2px 2px 3px #999;
+    box-shadow: 2px 2px 11px 1px #1f1f1fb0;
 
 	animation: plus-out 0.3s;
   	transition: all 0.3s;
 	}
-	
+
 	.primaryFabicon{
 		width:60px;
 		height:60px;
@@ -354,12 +355,20 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 		margin-top: 50px;
 		bottom:120px;
 		background-color: #3f4ca9;
-
+    	color: white;
 	}
 	.wpp{
 		margin-top: 50px;
 		bottom:40px;
 		background-color:#0C9;
+	}
+	.meli{
+		/*background-image: url(https://http2.mlstatic.com/ui/navigation/4.0.3/mercadolibre/logo__large_plus.png);
+    */
+		margin-top: 50px;
+		bottom:200px;
+		background-color:#fff159;
+		color: #2d278e;
 	}
 
 	.right-btn,.left-btn{
@@ -374,14 +383,6 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
         margin-right: 90%;
 	}
 
-	.meli{
-		/*background-image: url(https://http2.mlstatic.com/ui/navigation/4.0.3/mercadolibre/logo__large_plus.png);
-    */
-		margin-top: 50px;
-		bottom:200px;
-		background-color:#fff159;
-		color: #2d278e;
-	}
 	#container-floating:hover .deprecated{
 	  animation: plus-in 0.15s linear;
 	  animation-fill-mode: forwards;
@@ -472,8 +473,12 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   display: block;
   padding: 12px 24px;
 }
+
 html {
   scroll-behavior: smooth;
+}
+.false-href{
+  cursor: default;
 }
 
 
