@@ -9,36 +9,39 @@ var alts = ["Imagen de entrepiso de madera y hierro en Capital Federal (CABA)",
 // Modal Image Gallery
 function onClick(element) {
 // document.getElementById("img01").src = element.src;
-  document.getElementById("img01").src = "fotosBKP/Entrepiso_"+element.getAttribute('index')+".jpg";
-  document.getElementById("modal01").style.display = "block";
+    document.getElementById("img01").src = "fotosBKP/Entrepiso_" + element.getAttribute('index') + ".jpg";
+    document.getElementById("modal01").style.display = "block";
 //  var captionText = document.getElementById("caption");
 //  captionText.innerHTML = element.alt;
-      
-  $( "#img01" ).attr('index',element.getAttribute('index'));
+
+    $("#img01").attr('index', element.getAttribute('index'));
 }
 
-function left(){
+function left() {
 
-  var element = $( "#img01" );
-  var index = parseInt(element.attr('index'),10);
-  index = index-1;
-  if(index<1)index=MAX_ELEMENTS;
-  element.attr('src',"fotosBKP/Entrepiso_"+index+".jpg");
-  element.attr('index',index);
+    var element = $("#img01");
+    var index = parseInt(element.attr('index'), 10);
+    index = index - 1;
+    if (index < 1) index = MAX_ELEMENTS;
+    element.attr('src', "fotosBKP/Entrepiso_" + index + ".jpg");
+    element.attr('index', index);
 }
 
-function right(){
+function right() {
 
-  var element = $( "#img01" );
-  var index = parseInt(element.attr('index'),10);
-  if(index>=MAX_ELEMENTS)index= 0;
-  index = index+1;
-  element.attr('src',"fotosBKP/Entrepiso_"+index+".jpg");
-  element.attr('index',index);
+    var element = $("#img01");
+    var index = parseInt(element.attr('index'), 10);
+    if (index >= MAX_ELEMENTS) index = 0;
+    index = index + 1;
+    element.attr('src', "fotosBKP/Entrepiso_" + index + ".jpg");
+    element.attr('index', index);
 }
 
 // Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
+window.onscroll = function () {
+    myFunction()
+};
+
 function myFunction() {
     var navbar = document.getElementById("myNavbar");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -57,5 +60,56 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
+
+function loadImgs(position, offset) {
+    for (var i = position; i <= offset; i++) {
+
+        var img = $("#template").clone();
+        img.attr('src', "fotos/Entrepiso_" + i + ".jpg");
+        img.attr('height', "235px"); //TODO: PASAR ESTA LINEA A CADA PAGINA
+        img.attr('index', i);
+        //   img.attr('padding',"2px");
+
+        img.removeAttr('hidden');
+        img.removeAttr('id');
+        var divHovere = $("#hovereContainer").clone();
+        divHovere.attr('index', i);
+        divHovere.removeAttr('id');
+        divHovere.removeAttr('hidden');
+        divHovere.prepend(img);
+
+        var div = $("#templateContainer").clone();
+        div.removeAttr('hidden');
+        div.removeAttr('id');
+        div.append(divHovere);
+
+        $("#imgContainter").append(div);
+    }
+}
+
+loadImgs(1, FIRST_ELEMENTS);
+
+function loadMoreImgs() {
+    $("#plusContainer").attr('hidden', true);
+    $("#plusOnFbContainer").removeAttr('hidden');
+    loadImgs(FIRST_ELEMENTS + 1, MAX_ELEMENTS);
+}
+
+$(document).keydown(function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+    }
+    if (event.keyCode == 37) {
+        left();
+    }
+
+    if (event.keyCode == 39) {
+        right();
+    }
+    if (event.keyCode == 27) {
+        $('#modal01').hide()
+    }
+});
 
 

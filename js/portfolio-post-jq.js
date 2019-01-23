@@ -1,0 +1,5 @@
+
+var MAX_ELEMENTS = 48;
+var FIRST_ELEMENTS = 20;
+
+
