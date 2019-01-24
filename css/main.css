@@ -559,6 +559,10 @@ html {
     cursor: pointer;
 }
 
+.w3-animate-rightzoom{position:relative;animation:animaterightzoom 0.4s;transition-timing-function: ease;}
+@keyframes animaterightzoom{
+  from{top:-100px;right:-300px;opacity:0 ;transform:scale(0)} to{top:0;right:0;opacity:1;transform:scale(1)}
+}
 
 /* IMAGES */
 /* ///////////////////////    HOVEREFFECT 01/2019 		//////////////////////////////// */
