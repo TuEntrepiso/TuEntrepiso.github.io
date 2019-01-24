@@ -530,7 +530,33 @@ html {
 .false-href {
     cursor: default;
 }
+.material-red{
+    color: #fff!important;
+    background-color: #f44336;
+}
+.material-red:hover{
+    color: #000 !important;
+    background-color: #ffebee!important;
+}
 
+
+.w3-mymodal {
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.89);
+}
+.w3-mymodal img{
+    cursor: pointer;
+}
 
 
 /* IMAGES */

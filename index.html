@@ -336,16 +336,25 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 </div>
 
   <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-    <span class="w3-button w3-large w3-display-topright w3-black" title="Cerrar Imagen"><i
-            class="fa fa-remove"></i></span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent ">
+  <div id="modal01" class="w3-mymodal">
+  <span class="w3-button w3-large w3-display-topright material-red " title="Cerrar Imagen"
+        onclick="$('#modal01').hide()"><i class="fa fa-remove" style="font-size: 31px;"></i></span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent "
+         onclick="$('#modal01').hide()">
       <img id="img01" class="myp-image">
       <p id="caption" class="w3-opacity w3-large"></p>
     </div>
 
+    <!-- Left and right controls -->
+    <a id="left-container" onclick="left()" class="w3-hide-small w3-display-container float left-btn">
+      <i id="left-btn" class="fa fa-chevron-left  my-float"></i>
+    </a>
 
+    <a id="right-container" onclick="right()" class="w3-hide-small w3-display-container float right-btn">
+      <i id="right-btn" class="fa fa-chevron-right  my-float"></i>
+    </a>
   </div>
+
 
 <!-- Second Parallax Image with Portfolio Text -->
   <a class="false-href" href="#about">
