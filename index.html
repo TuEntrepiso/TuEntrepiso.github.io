@@ -184,7 +184,11 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
   <noscript id="deferred-material-styles">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet">
   </noscript>
-	
+
+  <noscript id="deferred-hamburger-styles">
+    <link href="css/hamburgers.spin.min.css" type="text/css" rel="stylesheet">
+  </noscript>
+		
   <script>
 	  
     //redirect index.html
@@ -202,14 +206,16 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
     };
     var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
         window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-    if (raf) raf(function() { window.setTimeout(loadDeferredStyles("deferred-font-a-styles"), 0); });
-    else window.addEventListener('load', loadDeferredStyles("deferred-font-a-styles"));
+   [
+        'deferred-font-a-styles',
+        'deferred-styles',
+        'deferred-material-styles',
+        'deferred-hamburger-styles'
+    ].forEach(function(src) {
+        if (raf) raf(function() { window.setTimeout(loadDeferredStyles(src), 0); });
+        else window.addEventListener('load', loadDeferredStyles(src));
+    });
 
-    if (raf) raf(function() { window.setTimeout(loadDeferredStyles("deferred-styles"), 0); });
-    else window.addEventListener('load', loadDeferredStyles("deferred-styles"));
-    
-    if (raf) raf(function() { window.setTimeout(loadDeferredStyles("deferred-material-styles"), 0); });
-    else window.addEventListener('load', loadDeferredStyles("deferred-material-styles"));
   </script>
 
 <!--////////////////////////////////////////////////7-->
@@ -218,9 +224,13 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
+ <!-- https://github.com/miketricking/hamburgers/blob/master/dist/hamburgers.css-->
+      <button id="hamburgerContainer" class="hamburger hamburger--spin w3-bar-item  w3-hide-medium w3-hide-large w3-right" type="button" 
+      onclick="toggleFunction();" title="Toggle Navigation Menu">
+        <span class="hamburger-box w3-top">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
     <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home"></i>
     Tu Entrepiso</a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
