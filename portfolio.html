@@ -175,6 +175,11 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
   <noscript id="deferred-font-a-styles">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
   </noscript>
+	
+  <noscript id="deferred-hamburger-styles">
+    <link href="css/hamburgers.spin.min.css" type="text/css" rel="stylesheet">
+  </noscript>
+
   <script>
     //redirect index.html
     var url_string = window.location.href;
@@ -191,14 +196,15 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
     };
     var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
         window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-    if (raf) raf(function() { window.setTimeout(loadDeferredStyles("deferred-font-a-styles"), 0); });
-    else window.addEventListener('load', loadDeferredStyles("deferred-font-a-styles"));
-
-    if (raf) raf(function() { window.setTimeout(loadDeferredStyles("deferred-styles"), 0); });
-    else window.addEventListener('load', loadDeferredStyles("deferred-styles"));
-
-    if (raf) raf(function() { window.setTimeout(loadDeferredStyles("deferred-material-styles"), 0); });
-    else window.addEventListener('load', loadDeferredStyles("deferred-material-styles"));
+     [
+        'deferred-font-a-styles',
+        'deferred-styles',
+        'deferred-material-styles',
+        'deferred-hamburger-styles'
+    ].forEach(function(src) {
+        if (raf) raf(function() { window.setTimeout(loadDeferredStyles(src), 0); });
+        else window.addEventListener('load', loadDeferredStyles(src));
+    });
 
   </script>
 
@@ -208,9 +214,12 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
+   <button id="hamburgerContainer" class="hamburger hamburger--spin w3-bar-item  w3-hide-medium w3-hide-large w3-right" type="button" 
+      onclick="toggleFunction();" title="Toggle Navigation Menu">
+        <span class="hamburger-box w3-top">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
     <a href="https://tuentrepiso.github.io/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Tu Entrepiso</a>
     <a href="index#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="index#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> QUIENES SOMOS</a>
@@ -224,11 +233,11 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
   </div>
 
   <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="index#about" class="w3-bar-item w3-button" onclick="toggleFunction()">QUIENES SOMOS</a>
-    <a href="index#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-    <a href="index#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACTO</a>
-  </div>
+     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-animate-rightzoom w3-card-4">
+      <a href="#about" class="w3-bar-item w3-button " onclick="toggleFunction()">QUIENES SOMOS</a>
+      <a href="#portfolio" class="w3-bar-item w3-button " onclick="toggleFunction()">PORTFOLIO</a>
+      <a href="#contact" class="w3-bar-item w3-button " onclick="toggleFunction()">CONTACTO</a>
+    </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
