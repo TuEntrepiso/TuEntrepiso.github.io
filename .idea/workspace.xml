@@ -16,14 +16,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="534" column="141" selection-start-line="534" selection-start-column="141" selection-end-line="534" selection-end-column="141" />
-              <caret line="537" column="137" selection-start-line="537" selection-start-column="137" selection-end-line="537" selection-end-column="137" />
-              <caret line="540" column="144" selection-start-line="540" selection-start-column="144" selection-end-line="540" selection-end-column="144" />
+            <state relative-caret-position="513">
+              <caret line="119" selection-start-line="119" selection-end-line="119" />
               <folding>
                 <element signature="n#script#7;n#head#0;n#html#0;n#!!top" />
                 <element signature="n#script#8;n#head#0;n#html#0;n#!!top" />
                 <element signature="n#button#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -229,16 +228,15 @@
       <workItem from="1548195540086" duration="1853000" />
       <workItem from="1548208257422" duration="1221000" />
       <workItem from="1548281797300" duration="8649000" />
-      <workItem from="1548802417983" duration="1588000" />
+      <workItem from="1548802417983" duration="1844000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15025000" />
+    <option name="totallyTimeSpent" value="15281000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17874141" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -342,14 +340,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="534" column="141" selection-start-line="534" selection-start-column="141" selection-end-line="534" selection-end-column="141" />
-          <caret line="537" column="137" selection-start-line="537" selection-start-column="137" selection-end-line="537" selection-end-column="137" />
-          <caret line="540" column="144" selection-start-line="540" selection-start-column="144" selection-end-line="540" selection-end-column="144" />
+        <state relative-caret-position="513">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
           <folding>
             <element signature="n#script#7;n#head#0;n#html#0;n#!!top" />
             <element signature="n#script#8;n#head#0;n#html#0;n#!!top" />
             <element signature="n#button#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
