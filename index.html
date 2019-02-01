@@ -304,41 +304,23 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img index="1" src="fotos/Entrepiso_1.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-shadow w3-hover-opacity" title="Entrepiso caba" alt="Entrepiso de madera y hierro en Capital Federal (CABA)">
-    </div>
 
-    <div class="w3-col m3">
-      <img index="2" src="fotos/Entrepiso_2.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-shadow w3-hover-opacity" title="Entrepiso lomas" alt="Entrepiso de madera Lomas de Zamora">
-    </div>
+  <!--Template img -->
+  <div id="imgContainter" class="w3-center">
 
-    <div class="w3-col m3">
-      <img index="3" src="fotos/Entrepiso_3.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-shadow w3-hover-opacity"  title="Entrepiso Banfield" alt="Entrepiso Banfield">
+    <div hidden="true" id="templateContainer" class="w3-col m3">
     </div>
+    <img hidden="true" id="template"  style="width:100%"
+         class="portfolio-img w3-hover-shadow"
+         title="Imagen de entrepiso de madera y hierro en Capital Federal CABA Lomas de Zamora Banfield Lanus escalada"
+         alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
 
-    <div class="w3-col m3">
-      <img index="7" src="fotos/Entrepiso_7.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-shadow w3-hover-opacity" title="Entrepiso caba" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
+    <div hidden="true" id="hovereContainer" class="hovereffect" onclick="onClick(this)">
+      <div class="overlay">
+        <h2>TuEntrepiso</h2>
+        <p>Ver Foto</p>
+      </div>
     </div>
-  </div>
-
-  <div class="w3-row-padding w3-center w3-section w3-hide-small">
-    <div class="w3-col m3">
-      <img index="5" src="fotos/Entrepiso_5.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-shadow w3-hover-opacity" title="Entrepiso caba" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
-    </div>
-
-    <div class="w3-col m3">
-      <img index="8" src="fotos/Entrepiso_8.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-shadow w3-hover-opacity" title="Entrepiso caba" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
-    </div>
-
-    <div class="w3-col m3">
-      <img index="4" src="fotos/Entrepiso_4.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-shadow w3-hover-opacity" title="Entrepiso caba" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
-    </div>
-
-    <div class="w3-col m3">
-      <img index="6" src="fotos/Entrepiso_6.jpg" style="width:100%" onclick="onClick(this)" class="portfolio-img w3-hover-opacity w3-hover-shadow" title="Entrepiso caba" alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
-    </div>
-   	
   </div>
 
 
@@ -348,7 +330,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
     <div class="w3-col m5 w3-center ">
       <p></p>
     </div>
-    <div class="w3-col m2 w3-center ">
+    <div class="w3-col m2 w3-center  w3-padding-small">
       <a href="https://tuentrepiso.github.io/portfolio" style="margin-bottom: 10px;/*margin-top:64px!important;*/"
          class="w3-button primary"><i class="fa fa-plus w3-margin-right"></i>VER MAS</a>
     </div>
