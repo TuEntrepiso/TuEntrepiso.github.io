@@ -8,13 +8,21 @@ PRECACHE_URLS = [
     './',
     'index.html?utm_source=homescreen',
     'css/main-min.css',
+    'css/hamburgers.spin.min.css',
     'js/index-post-jq.js',
     'js/portfolio-post-jq.js',
     'js/js-index-loader.js',
     'js/main-min.js',
     'fotos/Entrepiso_1.jpg',
     'fotos/Entrepiso_2.jpg',
-    'fotos/Entrepiso_3.jpg'
+    'fotos/Entrepiso_3.jpg', 
+    'fotos/Entrepiso_4.jpg',
+    'fotos/Entrepiso_5.jpg',
+    'fotos/Entrepiso_6.jpg',
+    'fotos/Entrepiso_7.jpg',
+    'fotos/Entrepiso_8.jpg',
+    'fotos/Entrepiso_principal2.webp',
+    'fotos/Entrepiso_principal2.jpg'
 
 ];
 
