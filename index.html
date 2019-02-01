@@ -24,9 +24,11 @@ ga('send', 'pageview');
 	
 <!-- Hotjar Tracking Code for https://tuentrepiso.github.io/ -->
 <script>
-  //redirect index.html
+  function getAndroidVersion(r){var n=(r=(r||navigator.userAgent).toLowerCase()).match(/android\s([0-9\.]*)/);return n?n[1]:void 0}
+	
+  //not track me
   var url_string = window.location.href;
-  if ( url_string.search("#123")==-1 ) {
+  if ( url_string.search("#123")!=-1 || getAndroidVersion()!="4.3" ) {
 
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
