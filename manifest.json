@@ -3,9 +3,14 @@
   "name": "TuEntrepiso - Muebles y proyectos especiales",
   "icons": [
     {
-      "src": "fotos/logo84.png",
+      "src": "fotos/logo48.png",
       "type": "image/png",
-      "sizes": "84x84"
+      "sizes": "48x48"
+    },
+     {
+      "src": "fotos/logo256.png",
+      "type": "image/png",
+      "sizes": "256x256"
     },
     {
       "src": "fotos/logo144.png",
