@@ -746,8 +746,8 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
             console.log(JSON.stringify({message: "success", value: success}));
         },
         function(fail){
-          console.log(JSON.stringify({message: "fail", value: fail}));
-	  $('#contactMailto').click();
+          $('#contactMailto')[0].click();
+	  console.log(JSON.stringify({message: "fail", value: fail}));
         }); 
       }
 
