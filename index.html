@@ -526,7 +526,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
         </div>
         <div class="w3-hide-medium w3-hide-large">
           <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right "></i>
-          <a class="false-href" href="mailto:mueblesyproyectosespeciales@hotmail.com?subject=TuEntrepiso%20-%20Quería%20solicitar%20un%20presupuesto">
+          <a id="contactMailto" class="false-href" href="mailto:mueblesyproyectosespeciales@hotmail.com?subject=TuEntrepiso%20-%20Quería%20solicitar%20un%20presupuesto">
            mueblesyproyectosespeciales<br>@hotmail.com
           </a>
         </div>
@@ -747,6 +747,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
         },
         function(fail){
           console.log(JSON.stringify({message: "fail", value: fail}));
+	  $('#contactMailto').click();
         }); 
       }
 
