@@ -8,4 +8,3 @@
     script.async = false;
     document.head.appendChild(script);
 });
-
