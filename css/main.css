@@ -302,6 +302,7 @@ body, html {
 .myp-image {
     max-width: 100%;
     height: 450PX;
+    padding-top: 64px !important;
 }
 
 /* Turn off parallax scrolling for tablets and phones */

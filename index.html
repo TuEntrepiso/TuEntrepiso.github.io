@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-ES">
+<html lang="es-ES" id="html">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123383467-1"></script>
@@ -340,7 +340,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
          title="Imagen de entrepiso de madera y hierro en Capital Federal CABA Lomas de Zamora Banfield Lanus escalada"
          alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
 
-    <div hidden="true" id="hovereContainer" class="hovereffect" onclick="onClick(this)">
+    <div hidden="true" id="hovereContainer" class="hovereffect" onclick="showImgModal(this)">
       <div class="overlay">
         <h2>TuEntrepiso</h2>
         <p>Ver Foto</p>
@@ -365,11 +365,11 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-mymodal">
-  <span class="w3-button  w3-display-topright material-red  animated zoomInUp" title="Cerrar Imagen"
-        onclick="$('#modal01').hide()"><i class="fa fa-remove" ></i></span>
+    <span class="w3-button  w3-display-topright material-red  animated zoomInUp" title="Cerrar Imagen"
+          onclick="hideImgModal();"><i class="fa fa-remove"></i></span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent "
-         onclick="$('#modal01').hide()">
-      <img id="img01" class="myp-image" alt="Imagen seleccionada">
+         onclick="hideImgModal();">
+      <img id="img01" class="myp-image " alt="Imagen seleccionada" >
       <p id="caption" class="w3-opacity w3-large"></p>
     </div>
 
@@ -450,6 +450,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
         En 1998 iniciamos este emprendimiento bajo el nombre de
         <a target="_blank"
            href="https://www.facebook.com/pg/Muebles-y-Proyectos-especiales-523828670967910/photos/?ref=page_internal"
+           style=" COLOR: #0c0c60;"
           >
           <i class="fa fa-home"> </i>Muebles y Proyectos Especiales
         </a>
@@ -610,18 +611,6 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
       <i id="wpp" class="fa fa-whatsapp my-float"></i>
     </a>
   </div>
-  
-  <script type="text/javascript">
-    // Remove entrance cool Effect
-    var element =  document.querySelector('.float.fb');
-    element.addEventListener('animationend', function() {  
-      element.classList.remove('animated', 'zoomInUp');
-    });   
-    var meliAnimated =  document.querySelector('.float.meli');
-    meliAnimated.addEventListener('animationend', function() {  
-      meliAnimated.classList.remove('animated', 'zoomInUp');
-    });
-  </script>
 
 
 <!--/////////////////////////////////////////////////-->

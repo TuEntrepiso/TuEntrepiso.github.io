@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-ES">
+<html lang="es-ES" id="html">
 <head>
  
     <!-- Google Analytics -->
@@ -312,7 +312,7 @@
          title="Imagen de entrepiso de madera y hierro en Capital Federal CABA Lomas de Zamora Banfield Lanus escalada"
          alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     
-    <div hidden="true" id="hovereContainer" class="hovereffect" onclick="onClick(this)">
+    <div hidden="true" id="hovereContainer" class="hovereffect" onclick="showImgModal(this)">
             <div class="overlay">
                 <h2>TuEntrepiso</h2>
                 <p>Ver Foto</p>
@@ -396,11 +396,11 @@
 
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-mymodal">
-  <span class="w3-button  w3-display-topright material-red  w3-animate-zoom" title="Cerrar Imagen"
-        onclick="$('#modal01').hide()"><i class="fa fa-remove" ></i></span>
+    <span class="w3-button  w3-display-topright material-red  animated zoomInUp" title="Cerrar Imagen"
+          onclick="hideImgModal();"><i class="fa fa-remove"></i></span>
       <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent "
-           onclick="$('#modal01').hide()">
-          <img id="img01" class="myp-image">
+           onclick="hideImgModal();">
+          <img id="img01" class="myp-image " alt="Imagen seleccionada">
           <p id="caption" class="w3-opacity w3-large"></p>
       </div>
 
