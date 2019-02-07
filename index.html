@@ -365,8 +365,12 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-mymodal">
-    <span class="w3-button  w3-display-topright material-red  animated zoomInUp" title="Cerrar Imagen"
+    <span class="w3-button  w3-display-topright material-red  animated zoomInUp close-button" title="Cerrar Imagen"
           onclick="hideImgModal();"><i class="fa fa-remove"></i></span>
+
+    <div class="w3-modal false-modal" onclick="hideImgModal();">
+    </div>
+
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent "
          onclick="hideImgModal();">
       <img id="img01" class="myp-image " alt="Imagen seleccionada" >

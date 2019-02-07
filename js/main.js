@@ -79,6 +79,10 @@ function loadImgs(position, offset) {
         img.attr('index', i);
         //   img.attr('padding',"2px");
 
+        if(i>MAX_ONSMALL_ELEMENTS){
+            img[0].classList.add("w3-hide-small");
+        }
+
         img.removeAttr('hidden');
         img.removeAttr('id');
         var divHovere = $("#hovereContainer").clone();
