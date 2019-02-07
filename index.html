@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="es-ES" id="html">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+  function getAndroidVersion(r){var n=(r=(r||navigator.userAgent).toLowerCase()).match(/android\s([0-9\.]*)/);return n?n[1]:void 0}
+  //not track me
+  var url_string = window.location.href;
+  function itIsNotMe() {
+    return url_string.search("#123") == -1 && getAndroidVersion() != "4.3";
+  }
+</script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123383467-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-123383467-1');
+  if ( itIsNotMe() ) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-123383467-1');
+  }
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <!-- Google Analytics -->
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-123383467-1', 'auto');
-ga('require', 'linkid', 'linkid.js');
-ga('send', 'pageview');
+  if ( itIsNotMe() ) {
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-123383467-1', 'auto');
+    ga('require', 'linkid', 'linkid.js');
+    ga('send', 'pageview');
+  }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 <!-- End Google Analytics -->
 	
 <!-- Hotjar Tracking Code for https://tuentrepiso.github.io/ -->
 <script>
-  function getAndroidVersion(r){var n=(r=(r||navigator.userAgent).toLowerCase()).match(/android\s([0-9\.]*)/);return n?n[1]:void 0}
-	
-  //not track me
-  var url_string = window.location.href;
-  if ( url_string.search("#123")==-1 && getAndroidVersion()!="4.3" ) {
-
+  if ( itIsNotMe() ) {
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:1061489,hjsv:6};
@@ -38,7 +45,6 @@ ga('send', 'pageview');
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-
   }
 </script>
 <!-- End Hotjar -->
