@@ -210,23 +210,11 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
 </head>
 <body>
-  <noscript id="deferred-styles">
-    <link rel="stylesheet" type="text/css" href="css/main.min.css"/>
-  </noscript>
-
-  <noscript id="deferred-font-a-styles">
+   <noscript id="all-deferred-styles">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-  </noscript>
-	
-  <noscript id="deferred-material-styles">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet">
-  </noscript>
-
-  <noscript id="deferred-hamburger-styles">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css"/>
     <link href="css/hamburgers.spin.min.css" type="text/css" rel="stylesheet">
-  </noscript>
-
-  <noscript id="deferred-animate-styles">
     <link href="css/animated.tue.min.css" type="text/css" rel="stylesheet">
   </noscript>
 
@@ -247,17 +235,9 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
     };
     var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
         window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-   [
-        'deferred-font-a-styles',
-        'deferred-styles',
-        'deferred-material-styles',
-        'deferred-animate-styles',
-        'deferred-hamburger-styles'
-    ].forEach(function(src) {
-        if (raf) raf(function() { window.setTimeout(loadDeferredStyles(src), 0); });
-        else window.addEventListener('load', loadDeferredStyles(src));
-    });
-
+    let src = 'all-deferred-styles'
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles(src), 0); });
+     else window.addEventListener('load', loadDeferredStyles(src));
   </script>
 
 <!--////////////////////////////////////////////////7-->
