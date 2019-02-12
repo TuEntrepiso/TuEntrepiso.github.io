@@ -51,8 +51,14 @@
 
     <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16">
 
-    <script src="js/js-portfolio-loader.js" async></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js' ></script>
+    <script type="text/javascript">
+      var MAX_ELEMENTS = 0;
+      var FIRST_ELEMENTS = 0;
+      var MAX_ONSMALL_ELEMENTS = 0;
 
+    </script>
+    <script src="js/main-min.js" ></script>
 
 <!--CSS PRINCIPAL-->  
 <style type="text/css">
@@ -190,34 +196,24 @@
 
 </head>
 <body>
-  <noscript id="deferred-material-styles">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet">
-  </noscript>
-
-  <noscript id="deferred-styles">
-    <link rel="stylesheet" type="text/css" href="css/main.min.css"/>
-  </noscript>
-
-  <noscript id="deferred-font-a-styles">
+ 
+  <noscript id="all-deferred-styles">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-  </noscript>
-	
-  <noscript id="deferred-hamburger-styles">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css"/>
     <link href="css/hamburgers.spin.min.css" type="text/css" rel="stylesheet">
-  </noscript>
-
-  <noscript id="deferred-animate-styles">
-      <link href="css/animated.tue.min.css" type="text/css" rel="stylesheet">
+    <link href="css/animated.tue.min.css" type="text/css" rel="stylesheet">
   </noscript>
 
   <script>
+    
     //redirect index.html
     var url_string = window.location.href;
-    if (url_string.length>39 && url_string.search("#")==-1 ) {
-      window.location.replace("https://tuentrepiso.github.io/portfolio");
+    if (url_string.length>32 && url_string.search("#")==-1 ) {
+   //   window.location.replace("https://tuentrepiso.github.io");
     }
 
-      var loadDeferredStyles = function(id) {
+    var loadDeferredStyles = function(id) {
       var addStylesNode = document.getElementById(id);
       var replacement = document.createElement("div");
       replacement.innerHTML = addStylesNode.textContent;
@@ -226,19 +222,10 @@
     };
     var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
         window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-    [
-        'deferred-font-a-styles',
-        'deferred-styles',
-        'deferred-material-styles',
-        'deferred-animate-styles',
-        'deferred-hamburger-styles'
-    ].forEach(function (src) {
-        if (raf) raf(function () {
-            window.setTimeout(loadDeferredStyles(src), 0);
-        });
-        else window.addEventListener('load', loadDeferredStyles(src));
-    });
-
+    let src = 'all-deferred-styles'
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles(src), 0); });
+     else window.addEventListener('load', loadDeferredStyles(src));
+  
   </script>
 
 <!--////////////////////////////////////////////////7-->
@@ -277,60 +264,128 @@
   <a class="false-href" href="#portfolio">
       <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
           <div class="w3-display-middle">
-    <span class="w3-center  w3-hide-small w3-xlarge w3-animate-opacity"
-          style="font-size: 425%!important; white-space:nowrap;">
-      Entrepisos en Madera y hierro 
-      <h4 class="w3-center">MUEBLES Y PROYECTOS ESPECIALES</h4>
-    </span>
-              <span class="w3-center   w3-hide-large w3-hide-medium w3-xlarge w3-animate-opacity"
-                    style="font-size: 425%!important; ">TuEntrepiso <h4
-                      class="w3-center">MUEBLES Y PROYECTOS ESPECIALES</h4>
-    </span>
-          </div> <!--  w3-padding-large w3-wide  -->
+            <span class="w3-center  w3-hide-small w3-xlarge w3-animate-opacity"
+                  style="font-size: 425%!important; white-space:nowrap;">
+              <i class="fa fa-home w3-hide-small  animated bounce " style=" animation-iteration-count: 2;"></i>
+              TuEntrepiso - Preguntas
+              <h4 class="w3-center">MUEBLES Y PROYECTOS ESPECIALES</h4>
+            </span>
+            <span class="w3-center   w3-hide-large w3-hide-medium w3-xlarge w3-animate-opacity"
+                  style="font-size: 425%!important; ">TuEntrepiso <h4
+                    class="w3-center">MUEBLES Y PROYECTOS ESPECIALES</h4>
+            </span>
+          </div> 
       </div>
   </a>
 <!--fin    HEADER!!!!!!!!-->
 <!--/////////////////////////////////////////////////-->
-  <h1 id="portfolio" class="w3-center">Entrepisos en Hierro y Madera</h1>
-  <h3 class="w3-center">
-     Nos dedicamos a realizar entrepisos a medida en C.A.B.A. y G.B.A.
-  </h3>
+  <h1 id="portfolio" class="w3-center">Preguntas sobre Entrepisos </h1>
+  <div class="w3-center">
+     Estas son las preguntas que nos hacen frecuentemente acerca del trabajo que realizamos
+  </div>
   <br/>
-
-  <h3 class="w3-center">Mis Trabajos</h3>
-  <p class="w3-center"><em>
-   Trabajos realizados en C.A.B.A. y G.B.A. <br>
-    </em>
-  </p><br>
-
-
-
-<!--Template img -->
-
-<div id="imgContainter" class="w3-center">
-
-    <div hidden="true" id="templateContainer" class="w3-col m3">
-    </div>
-    <img hidden="true" id="template"  style="width:100%"
-         class="portfolio-img w3-hover-shadow"
-         title="Imagen de entrepiso de madera y hierro en Capital Federal CABA Lomas de Zamora Banfield Lanus escalada"
-         alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
     
-    <div hidden="true" id="hovereContainer" class="hovereffect" onclick="showImgModal(this)">
-            <div class="overlay">
-                <h2>TuEntrepiso</h2>
-                <p>Ver Foto</p>
-            </div>
-    </div>
-</div>
+  <div id="comments" class="w3-content"></div>
+
+  <!--Template questions -->
+  <div class="w3-padding-large w3-container w3-content" 
+    id="questionsContainter" hidden="true">
+  </div>
+  <div hidden="true">
+    <article class="questions__item questions__item--question" id="questionTemplate">
+          <div class="questions__icon ">
+            <i class="material-icons">question_answer</i>
+<!--            <i class="fa fa-question-circle-o "  style="font-size:24px"></i>-->
+          </div>
+          <div class="questions__content" id="questionTextTemplate">
+            <!-- q -->
+          </div>
+    </article>
+    <article class="questions__item questions__item--answer" id="answerTemplate">
+      <div class="questions__content" id="answerTextTemplate">
+           <!-- a -->
+      </div>
+    </article>
+  </div>
+
+
+<script type="text/javascript">
+
+   var questionsAnswers =
+   [{q:'Hola, quisiera saber si Uds hacen la instalacion y se acercan al lugar a tomar las medidas?',
+     a:'Así es. Nosotros hacemos la construcción, la instalación y lo entregamos pintado y listo para su uso. Nos acercamos al lugar para tomar las medidas y hacer un presupuesto mas preciso.'},
+    {q:'Disculpame, pero como hago para que vengan a ver el lugar? Gracias.',
+    a:'Podes solicitar un presupuesto llamando al Teléfono:11 6145-7082 o mandándonos un mail a mueblesyproyectosespeciales@hotmail.com y coordinamos.'},
+    {q:'Buenas tardes. Hacen trabajos por Villa Crespo? y por zona sur? ',
+    a:'Sí. Realizamos trabajos en: Avellaneda, Lanús, Lomas de Zamora, Agronomía, Almagro, Balvanera, Barracas, Belgrano, Boedo, Caballito, Chacarita, Coghlan, Colegiales, Constitución, Flores, Floresta, La Boca, La Paternal, Liniers, Mataderos, Monte Castro, Montserrat, Nueva Pompeya, Nuñez, Palermo, Parque Avellaneda, Parque Chacabuco, Parque Chas, Parque Patricios, Puerto Madero, Recoleta, Retiro, Saavedra, San Cristóbal, San Nicolás, San Telmo, Versalles, Villa Crespo, Vélez Sarsfield.'}
+    ];
+    
+    questionsAnswers.forEach(function(src) {
+
+        var qText = $("#questionTextTemplate").clone();
+        qText.append(src.q);
+        qText.removeAttr('id');
+
+        var divHovere = $("#questionTemplate").clone();
+        divHovere.removeAttr('id');
+        divHovere.append(qText);
+
+
+        var answText = $("#answerTextTemplate").clone();
+        answText.append(src.a);
+        answText.removeAttr('id');
+
+        var answerContainer = $("#answerTemplate").clone();
+        answerContainer.removeAttr('id');
+        answerContainer.prepend(answText);
+
+        var div = $("#questionsContainter").clone();
+        div.removeAttr('hidden');
+        div.removeAttr('id');
+        div.append(divHovere);
+        div.append(answerContainer);
+
+        $("#comments").append(div);
+    });
+
+</script>
+
+<style type="text/css">
+  .questions__item--question  {
+     /* color: #333;*/
+       font-weight: 400;
+  }
+  .questions__content {
+      margin: 0 0 0 30px;
+  }
+  .questions__item {
+      overflow: hidden;
+      margin: 10px 20px 0 0;
+  }
+  .questions__group {
+      position: relative;
+      margin: 15px 0 32px;
+  }
+  .questions__item--answer {
+      color: #656;
+  }
+
+  .questions__icon {
+      float: left;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      vertical-align: middle;
+  }
+</style>
 
   <div id="container-floating" >
 
       <!--Mercado libre ICON-->
-      <a target="_blank" title="Mercado libre TuEntrepiso"
+      <a target="_blank" title="Mercado libre TuEntrepiso"  
          href="https://servicio.mercadolibre.com.ar/MLA-761425541-entrepisos-de-madera-_JM"
-         class="w3-display-container float meli w3-hover-shadow delay-2s animated zoomInUp">
-          <i id="meli" class="fa fa-handshake-o my-float"></i>
+         class="w3-display-container float meli w3-hover-shadow w3-hide-small delay-2s animated zoomInUp">
+        <i id="meli" class="fa fa-handshake-o my-float"></i>
       </a>
 
       <!--Facebook ICON-->
@@ -342,50 +397,18 @@
 
       <!--WHATSAPP ICON-->
       <a target="_blank" href="https://wa.me/5491161457082?text=Hola, me gustaria solicitar un presupuesto"
-         title="Whatsapp TuEntrepiso" class="w3-display-container float wpp w3-hover-shadow " onclick="showWpp();">
+         title="Whatsapp TuEntrepiso" class="w3-display-container float wpp w3-hover-shadow ">
           <i id="wpp" class="fa fa-whatsapp my-float"></i>
       </a>
   </div>
 
 
-
-  <!--boton VER MAS-->
-  <!--VER MAS ICON-->
-  <div class=" w3-center" id="plusContainer" onclick="loadMoreImgs()">
-      <h2>
-          Ver mas fotos
-      </h2>
-      <a target="_blank" title="Ver mas fotos" class=" w3-button primaryFabicon animated pulse infinite slow">
-          <i class="fa fa-plus plus"></i>
-      </a>
-  </div>
-
-  <!--VER MAS btn-->
-  <div class=" w3-center " id="plusOnFbContainer" hidden="true">
-      <p>Podrás encontrar mas fotos en nuestra página de facebook (muebles y proyectos especiales)</p>
-      <a target="_blank" title="Facebook TuEntrepiso"
-         href="https://www.facebook.com/pg/Muebles-y-Proyectos-especiales-523828670967910/photos/?ref=page_internal"
-         style="margin-bottom: 10px;"
-         class="w3-button primary "><i class="fa fa-facebook-official w3-margin-right"></i>VER MAS FOTOS</a>
-  </div>
-
-  <p class="w3-hide-small w3-center w3-row-padding w3-container w3-padding-32"><em>
-      Realizamos trabajos en:<br/>
-      Avellaneda, Lanús, Lomas de Zamora,
-      Agronomía, Almagro, Balvanera,<br/> Barracas, Belgrano, Boedo, Caballito, Chacarita, Coghlan, Colegiales,
-      Constitución, Flores, Floresta, La Boca, La Paternal, Liniers, Mataderos, Monte Castro, Montserrat, Nueva
-      <br/>
-      Pompeya, Nuñez, Palermo, Parque Avellaneda, Parque Chacabuco, Parque Chas, Parque Patricios, Puerto Madero,
-      Recoleta, Retiro, Saavedra, San Cristóbal, San Nicolás, San Telmo, Versalles, Villa Crespo, Vélez Sarsfield.
-  </em>
-  </p>
-
-  <h3 class="w3-center">Solicitá presupuesto <strong>sin cargo</strong> llamando al Teléfono: <br/>
+  <h4 class="w3-center">Solicitá presupuesto <strong>sin cargo</strong> llamando al Teléfono: <br/>
       <strong>
           <i class="fa fa-phone fa-fw w3-hover-text-black" style="font-size:20px"></i>
             <a href="tel:1161457082" title="1161457082" >11 6145-7082</a>
       </strong>
-  </h3>
+  </h4>
   <h5 class="w3-center w3-hide-small">
       O envianos un mail a
       <a href="mailto:mueblesyproyectosespeciales@hotmail.com?subject=TuEntrepiso%20-%20Quería%20solicitar%20un%20presupuesto">mueblesyproyectosespeciales@hotmail.com</a>
@@ -398,31 +421,6 @@
   </h5>
 
 
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-mymodal">
-    <span class="w3-button  w3-display-topright material-red  animated zoomInUp close-button" title="Cerrar Imagen"
-          onclick="hideImgModal();"><i class="fa fa-remove"></i></span>
-
-      <div class="w3-modal false-modal" onclick="hideImgModal();">
-      </div>
-
-      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent "
-           onclick="hideImgModal();">
-          <img id="img01" class="myp-image " alt="Imagen seleccionada" >
-          <p id="caption" class="w3-opacity w3-large"></p>
-      </div>
-
-      <!-- Left and right controls -->
-      <a id="left-container" onclick="left()" class="w3-hide-small w3-display-container float left-btn">
-          <i id="left-btn" class="fa fa-chevron-left  my-float"></i>
-      </a>
-
-      <a id="right-container" onclick="right()" class="w3-hide-small w3-display-container float right-btn">
-          <i id="right-btn" class="fa fa-chevron-right  my-float"></i>
-      </a>
-  </div>
-
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
 
 <!--/////////////////////////////////////////////////-->
 <!-- Footer -->
