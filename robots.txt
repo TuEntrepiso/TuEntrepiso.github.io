@@ -1,5 +1,4 @@
 Sitemap: https://tuentrepiso.github.io/sitemap.txt
 User-agent: *
 Disallow: /css/
-Disallow: /js/
 Disallow: /layout/
