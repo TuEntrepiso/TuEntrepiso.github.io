@@ -190,25 +190,14 @@
 
 </head>
 <body>
-  <noscript id="deferred-material-styles">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet">
-  </noscript>
 
-  <noscript id="deferred-styles">
-    <link rel="stylesheet" type="text/css" href="css/main.min.css"/>
-  </noscript>
-
-  <noscript id="deferred-font-a-styles">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-  </noscript>
-	
-  <noscript id="deferred-hamburger-styles">
-    <link href="css/hamburgers.spin.min.css" type="text/css" rel="stylesheet">
-  </noscript>
-
-  <noscript id="deferred-animate-styles">
-      <link href="css/animated.tue.min.css" type="text/css" rel="stylesheet">
-  </noscript>
+    <noscript id="all-deferred-styles">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/main.min.css"/>
+        <link href="css/hamburgers.spin.min.css" type="text/css" rel="stylesheet">
+        <link href="css/animated.tue.min.css" type="text/css" rel="stylesheet">
+    </noscript>
 
   <script>
     //redirect index.html
@@ -217,27 +206,18 @@
       window.location.replace("https://tuentrepiso.github.io/portfolio");
     }
 
-      var loadDeferredStyles = function(id) {
-      var addStylesNode = document.getElementById(id);
-      var replacement = document.createElement("div");
-      replacement.innerHTML = addStylesNode.textContent;
-      document.body.appendChild(replacement)
-      addStylesNode.parentElement.removeChild(addStylesNode);
+    var loadDeferredStyles = function(id) {
+        var addStylesNode = document.getElementById(id);
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
     };
     var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
         window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-    [
-        'deferred-font-a-styles',
-        'deferred-styles',
-        'deferred-material-styles',
-        'deferred-animate-styles',
-        'deferred-hamburger-styles'
-    ].forEach(function (src) {
-        if (raf) raf(function () {
-            window.setTimeout(loadDeferredStyles(src), 0);
-        });
-        else window.addEventListener('load', loadDeferredStyles(src));
-    });
+    let src = 'all-deferred-styles'
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles(src), 0); });
+    else window.addEventListener('load', loadDeferredStyles(src));
 
   </script>
 

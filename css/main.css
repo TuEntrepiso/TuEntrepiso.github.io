@@ -322,9 +322,9 @@ body, html {
 }
 
 .primary:hover {
-    background-color: #022a49 !important;
+    background-color: #033c68 !important;
     color: #fff !important;
-    box-shadow: 2px 2px 20px 6px #999;
+    box-shadow: 2px 2px 9px 2px #999;
 }
 
 /*  FAB ICON   */

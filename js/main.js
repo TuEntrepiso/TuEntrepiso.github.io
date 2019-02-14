@@ -100,8 +100,6 @@ function loadImgs(position, offset) {
     }
 }
 
-loadImgs(1, FIRST_ELEMENTS);
-
 function loadMoreImgs() {
     $("#plusContainer").attr('hidden', true);
     $("#plusOnFbContainer").removeAttr('hidden');
