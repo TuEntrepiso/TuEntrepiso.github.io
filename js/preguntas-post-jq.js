@@ -1,7 +1,34 @@
-var example = {
-    q: '.',
-    a: '.'
-};
+var example = {q: '', a: 'No hay preguntas con su criterio de búsqueda'};
+
+var mySearch = $(".searchBox input");
+mySearch.keyup(function () {
+    generateQuestionsAnswers(mySearch.val());
+});
+
+window.addEventListener('scroll', function myFunction() {
+    var searchBox = $(".searchBox").get(0);
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        searchBox.classList.remove("w3-hide");
+    } else {
+        searchBox.classList.add("w3-hide");
+    }
+});
+
+$(".searchBox").click(function () {
+    mySearch.focus();
+});
+
+/* NOT WORKING
+  $("#daSearchBox").click(function() {
+    location.href = $("#searchHrefTarget")[0].href;
+ //   $("#searchHrefTarget")[0].focus();
+    mySearch.focus();
+  });
+ mySearch.click(function() {
+    location.href = $("#searchHrefTarget")[0].href;
+    mySearch.focus();
+  });
+*/
 
 var questionsAnswers =
     [{
@@ -29,30 +56,59 @@ var questionsAnswers =
             a: 'Sí. Nosotros realizamos ese tipo de trabajo. Me podes consultar al  1561457082.'
         }
     ];
-questionsAnswers.forEach(function (src) {
 
-    var qText = $("#questionTextTemplate").clone();
-    qText.append(src.q);
-    qText.removeAttr('id');
+function generateQuestionsAnswers(text) {
 
-    var divHovere = $("#questionTemplate").clone();
-    divHovere.removeAttr('id');
-    divHovere.append(qText);
+    $("#comments").empty();
+
+    var clone = $.extend(true, [], questionsAnswers);
+
+    if (text != null && text != undefined && text != "") {
+
+        //var allWords = text.split(" ");
+        clone = clone.filter(function (replacement) {
+            return replacement.q.toUpperCase().includes(text.toUpperCase())
+                || replacement.a.toUpperCase().includes(text.toUpperCase());
+        })
+            .map(function (replacement) {
+                replacement.q = replacement.q.replace(new RegExp(text, 'gi'), '<strong>' + text + '</strong>');
+                replacement.a = replacement.a.replace(new RegExp(text, 'gi'), '<strong>' + text + '</strong>');
+
+                return replacement;
+            });
+
+    }
+
+    if (jQuery.isEmptyObject(clone))
+        clone.push(example);
+
+    clone.forEach(function (src) {
+
+        var qText = $("#questionTextTemplate").clone();
+        qText.append(src.q);
+        qText.removeAttr('id');
+
+        var divHovere = $("#questionTemplate").clone();
+        divHovere.removeAttr('id');
+        divHovere.append(qText);
 
 
-    var answText = $("#answerTextTemplate").clone();
-    answText.append(src.a);
-    answText.removeAttr('id');
+        var answText = $("#answerTextTemplate").clone();
+        answText.append(src.a);
+        answText.removeAttr('id');
 
-    var answerContainer = $("#answerTemplate").clone();
-    answerContainer.removeAttr('id');
-    answerContainer.prepend(answText);
+        var answerContainer = $("#answerTemplate").clone();
+        answerContainer.removeAttr('id');
+        answerContainer.prepend(answText);
 
-    var div = $("#questionsContainter").clone();
-    div.removeAttr('hidden');
-    div.removeAttr('id');
-    div.append(divHovere);
-    div.append(answerContainer);
+        var div = $("#questionsContainter").clone();
+        div.removeAttr('hidden');
+        div.removeAttr('id');
+        div.append(divHovere);
+        div.append(answerContainer);
 
-    $("#comments").append(div);
-});
+        $("#comments").append(div);
+    });
+};
+
+generateQuestionsAnswers(null);
