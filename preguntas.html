@@ -222,12 +222,12 @@
       var addStylesNode = document.getElementById(id);
       var replacement = document.createElement("div");
       replacement.innerHTML = addStylesNode.textContent;
-      document.body.appendChild(replacement)
+      document.body.appendChild(replacement);
       addStylesNode.parentElement.removeChild(addStylesNode);
     };
     var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
         window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-    let src = 'all-deferred-styles'
+    let src = 'all-deferred-styles';
     if (raf) raf(function() { window.setTimeout(loadDeferredStyles(src), 0); });
      else window.addEventListener('load', loadDeferredStyles(src));
 
@@ -262,9 +262,9 @@
 
   <!-- Navbar on small screens -->
      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-animate-rightzoom w3-card-4">
-      <a href="#about" class="w3-bar-item w3-button " onclick="toggleFunction()">QUIENES SOMOS</a>
-      <a href="#portfolio" class="w3-bar-item w3-button " onclick="toggleFunction()">PORTFOLIO</a>
-      <a href="#contact" class="w3-bar-item w3-button " onclick="toggleFunction()">CONTACTO</a>
+      <a href="index#about" class="w3-bar-item w3-button " onclick="toggleFunction()">QUIENES SOMOS</a>
+      <a href="index#portfolio" class="w3-bar-item w3-button " onclick="toggleFunction()">PORTFOLIO</a>
+      <a href="index#contact" class="w3-bar-item w3-button " onclick="toggleFunction()">CONTACTO</a>
     </div>
 </div>
 
