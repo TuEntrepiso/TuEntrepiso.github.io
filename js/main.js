@@ -133,6 +133,16 @@ var meliAnimated =  document.querySelector('.float.meli');
 meliAnimated.addEventListener('animationend', function() {
     meliAnimated.classList.remove('animated', 'zoomInUp');
 });
+});
 
+$(document).ready(function () {
 
-
+    if (window.location.href.includes("#123")) {
+        var allHref = $("a[href^='https://tuentrepiso.github.io']");
+        allHref.each(function () {
+            var anHref = $( this ).get(0);
+                anHref.href = anHref.href + "#123"
+            }
+        );
+    }
+});
