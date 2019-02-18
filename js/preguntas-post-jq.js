@@ -54,6 +54,10 @@ var questionsAnswers =
         {
             q: 'Un compañero de trabajo paso tu contacto que trabajas con hierro y madera. Quería saber si realizas puertas corredizas?',
             a: 'Sí. Nosotros realizamos ese tipo de trabajo. Me podes consultar al  1561457082.'
+        },
+        {
+            q: 'Cuanto me sale hacer un entrepiso?',
+            a: 'Todo depende de las medidas del mismo. Nos podes consultar al  1561457082 y te hacemos un presupuesto sin cargo.'
         }
     ];
 
