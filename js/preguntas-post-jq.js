@@ -15,6 +15,9 @@ window.addEventListener('scroll', function myFunction() {
 });
 
 $(".searchBox").click(function () {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#portfolio").offset().top
+    }, 20);
     mySearch.focus();
 });
 
