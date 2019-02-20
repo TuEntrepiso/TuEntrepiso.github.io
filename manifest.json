@@ -19,7 +19,7 @@
     }
   ],
   "display": "standalone",
-  "theme_color": "#01579B",
-  "background_color": "#012e5c",
+  "theme_color": "#012e5c",
+  "background_color": "#01579B",
   "start_url": "/index.html?utm_source=homescreen"
 }
