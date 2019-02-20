@@ -6,7 +6,7 @@
   //not track me
   var url_string = window.location.href;
   function itIsNotMe() {
-    return url_string.search("#123") == -1 && getAndroidVersion() != "4.3";
+    return url_string.search("#123") == -1 && getAndroidVersion() != "4.3" && screen.width!=720 && screen.height!=1280 ;
   }
   
   if ( itIsNotMe() ) {
