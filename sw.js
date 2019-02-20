@@ -1,10 +1,11 @@
-var PRECACHE = 'precache-v3';
+var PRECACHE = 'precache-v4';
 var RUNTIME = 'runtime';
 
 // list the files you want cached by the service worker
 PRECACHE_URLS = [
     'index.html',
     'portfolio.html',
+    'preguntas.html',
     './',
     'index.html?utm_source=homescreen',
     'css/main.min.css',
