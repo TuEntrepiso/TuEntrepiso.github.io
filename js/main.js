@@ -64,12 +64,14 @@ function showImgModal(element) {
 
     $("#html").css('overflow-y', "hidden");
 
+    history.pushState({page: 1}, "title 2", "?page="+index+"#");
 }
 
 
 function hideImgModal() {
     $('#modal01').hide()
     $("#html").css('overflow-y', "scroll");
+    history.back();
 }
 
 
