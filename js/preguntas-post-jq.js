@@ -61,6 +61,22 @@ var questionsAnswers =
         {
             q: 'Cuanto me sale hacer un entrepiso?',
             a: 'Todo depende de las medidas del mismo. Nos podes consultar al  1561457082 y te hacemos un presupuesto sin cargo.'
+        },
+        {
+            q: '¿Realizan trabajos en zona sur ?',
+            a: 'Si.'
+        },
+        {
+            q: '¿Qué es un entrepiso?',
+            a: 'Un entresuelo, entrepiso, mezzanina, mezzanine, es un piso intermedio entre dos plantas principales de un edificio. Generalmente, tiene un techo bajo y sobresale en forma de balcón.'
+        },
+        {
+            q: 'Se puede hacer una habitación en un entrepiso?',
+            a: 'Sí, se puede.'
+        },
+        {
+            q: 'Como hacer un entrepiso?',
+            a: 'Podes solicitar un presupuesto mandándo un whatsapp al 11 6145-7082 y coordinamos para ver el lugar y tomar las medidas.'
         }
     ];
 
