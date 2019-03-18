@@ -63,8 +63,8 @@ var questionsAnswers =
             a: 'Todo depende de las medidas del mismo. Nos podes consultar al  1561457082 y te hacemos un presupuesto sin cargo.'
         },
         {
-            q: '¿Realizan trabajos en zona sur ?',
-            a: 'Si.'
+            q: 'Tienen fotos de entrepisos con escaleras?',
+            a: 'Sí. Podes hacer click en el boton de PORTFOLIO en el menu para ver todas las imagenes.'
         },
         {
             q: '¿Qué es un entrepiso?',
