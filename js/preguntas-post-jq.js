@@ -21,6 +21,14 @@ $(".searchBox").click(function () {
     mySearch.focus();
 });
 
+mySearch.keydown(function (event) {
+    if (event.keyCode === 13  || event.keyCode == 27) {
+        if (event.keyCode == 27)
+            generateQuestionsAnswers('');
+        $("#portfolio").focus();
+    }
+});
+
 /* NOT WORKING
   $("#daSearchBox").click(function() {
     location.href = $("#searchHrefTarget")[0].href;
@@ -77,6 +85,10 @@ var questionsAnswers =
         {
             q: 'Como hacer un entrepiso?',
             a: 'Podes solicitar un presupuesto mandándo un whatsapp al 11 6145-7082 y coordinamos para ver el lugar y tomar las medidas.'
+        },
+        {
+            q: 'Querìa saber si tienen publicaciones en  <a target="_blank" rel="noreferrer"  href="https://mercadolibre.com.ar"> Mercado libre</a>',
+            a: 'Asì es. Pero es mas rápido y fácil contactarnos a través de la pàgina'
         }
     ];
 
