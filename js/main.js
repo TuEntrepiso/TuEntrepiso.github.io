@@ -170,19 +170,33 @@ $(document).keydown(function (event) {
     }
 });
 
-// ICONS
+
+// Footer
+
+$(function(){
+    $("#includedFooterContent").load("layout/footer-floatbtns.html", function() {
+        // ICONS
 
 // Remove entrance cool Effect
-var element =  document.querySelector('.float.fb');
-element.addEventListener('animationend', function() {
-    element.classList.remove('animated', 'zoomInUp');
-});
-var meliAnimated =  document.querySelector('.float.meli');
-meliAnimated.addEventListener('animationend', function() {
-    meliAnimated.classList.remove('animated', 'zoomInUp');
+        var element =  document.querySelector('.float.fb');
+        element.addEventListener('animationend', function() {
+            element.classList.remove('animated', 'zoomInUp');
+        });
+        var meliAnimated =  document.querySelector('.float.meli');
+        meliAnimated.addEventListener('animationend', function() {
+            meliAnimated.classList.remove('animated', 'zoomInUp');
+        });
+    });
+
 });
 
+// replace href with #123 if present
 $(document).ready(function () {
+
+
+
+
+
 
     if (window.location.href.includes("#123")) {
         var allHref = $("a[href^='https://tuentrepiso.github.io']");

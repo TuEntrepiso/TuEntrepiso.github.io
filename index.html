@@ -190,7 +190,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
     };
     var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
         window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-    let src = 'all-deferred-styles'
+    let src = 'all-deferred-styles';
     if (raf) raf(function() { window.setTimeout(loadDeferredStyles(src), 0); });
      else window.addEventListener('load', loadDeferredStyles(src));
   </script>
@@ -280,7 +280,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
     <img hidden="true" id="template"  style="width:100%"
          class="portfolio-img w3-hover-shadow"
          title="Imagen de entrepiso de madera y hierro en Capital Federal CABA Lomas de Zamora Banfield Lanus escalada"
-         alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
+         alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)" src="fotos/no_image.jpg">
 
     <div hidden="true" id="hovereContainer" class="hovereffect" onclick="showImgModal(this)">
       <div class="overlay">
@@ -315,7 +315,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent "
          onclick="hideImgModal();">
-      <img id="img01" class="myp-image " alt="Imagen seleccionada" >
+      <img id="img01" class="myp-image " alt="Imagen seleccionada"  src="fotos/no_image.jpg">
       <p id="caption" class="w3-opacity w3-large"></p>
     </div>
 
@@ -345,8 +345,8 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
     <div class="w3-row">
       <a class="false-href w3-hide-small" href="#about">
         <div class="w3-col m2 w3-center w3-padding-large">
-          <img src="fotos/logo144.png" class="w3-round w3-image w3-hover-opacity-off" alt="TuEntrepiso" width="100"
-               height="120">
+          <img src="fotos/logo144.png" class="w3-round w3-image w3-hover-opacity-off" alt="TuEntrepiso" width="144"
+               height="144">
         </div>
       </a>
 
@@ -394,7 +394,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
       </h4>
       <p class="w3-center w3-row-padding w3-container ">
         En 1998 iniciamos este emprendimiento bajo el nombre de
-        <a target="_blank"
+        <a target="_blank" rel="noreferrer"
            href="https://www.facebook.com/pg/Muebles-y-Proyectos-especiales-523828670967910/photos/?ref=page_internal"
            style=" COLOR: #0c0c60;"
           >
@@ -404,7 +404,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
         Debido a la vasta experiencia adquirida con <strong>+200 trabajos realizados</strong> ,a partir del 2001 nos
         especializamos en el diseño, asesoramiento y la creación de entrepisos.<br/><br/>
         Hasta el 2017, trabajamos principalmente a través de
-        <a target="_blank" class="meli"
+        <a target="_blank" class="meli" rel="noreferrer"
            href="https://mercadolibre.com.ar">
           <strong>
 	  <img src="fotos/mercado-libre-logo.png"  style="width: 39px;height: 38px;" alt="Mercado libre">
@@ -413,7 +413,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
         clientes.<br/><br/>
         En el 2018 por cuestiones de marketing nos renovamos bajo el nombre de <strong>TuEntrepiso</strong> creando la
         página web en
-        <a target="_blank" href="https://google.com.ar">
+        <a target="_blank" href="https://google.com.ar" rel="noreferrer" >
           <img style="width: 60px;" src="fotos/google-2015.svg" alt="Google"
                                                              title="Google"/></a>
         para tener una mayor visibilidad de los trabajos realizados y brindarle a los interesados una atención más
@@ -422,24 +422,24 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
       </p>
       <p class="w3-center w3-row-padding w3-container w3-padding-16">
         Podés encontrar los <em>comentarios</em> en nuestra página de
-        <a target="_blank"
+        <a target="_blank" rel="noreferrer"
            href="https://mercadolibre.com.ar"> <strong>Mercado
           libre TuEntrepiso</strong></a>
           <br/>
-          Si tenes alguna pregunta visitá nuestra sección de 
+          Si tenes alguna pregunta visitá nuestra sección de
             <strong>
               <a href="https://tuentrepiso.github.io/preguntas">
               <i class="fa fa-question-circle "></i>
-             Preguntas frecuentes</a>  
-            </strong> 
-	      
+             Preguntas frecuentes</a>
+            </strong>
+
+      </p>
         <!--meli selection-->
         <!--///////////////////////////////////////////////////////-->
       <div id="includedContent"></div>
       <!--meli selection-->
       <!--///////////////////////////////////////////////////////-->
 
-      </p>
 
     </div>
 </div>
@@ -551,53 +551,11 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
   <div class="snackbar" id="mail-snackbar">Mail Enviado</div>
   <div class="snackbar" id="wpp-snackbar">Solicitá presupuesto llamando al Teléfono: 11 6145-7082</div>
 
-  <div id="container-floating" >
-   
-    <!--Mercado libre ICON-->
-    <a target="_blank" title="Mercado libre TuEntrepiso"  
-       href="https://servicio.mercadolibre.com.ar/MLA-761425541-entrepisos-de-madera-_JM"
-       class="w3-display-container float meli w3-hover-shadow w3-hide delay-2s animated zoomInUp">
-      <i id="meli" class="fa fa-handshake-o my-float"></i>
-    </a>
-	
-    <!--Facebook ICON-->
-    <a target="_blank" title="Facebook TuEntrepiso"
-       href="https://www.facebook.com/pg/Muebles-y-Proyectos-especiales-523828670967910/photos/?ref=page_internal"
-       class="w3-display-container float fb w3-hover-shadow delay-1s animated zoomInUp">
-      <i id="fb" class="fa fa-facebook-official my-float"></i>
-    </a>
-
-    <!--WHATSAPP ICON-->
-    <a target="_blank" href="https://wa.me/5491161457082?text=Hola, me gustaria solicitar un presupuesto"
-       title="Whatsapp TuEntrepiso" class="w3-display-container float wpp w3-hover-shadow " onclick="showWpp();">
-      <i id="wpp" class="fa fa-whatsapp my-float"></i>
-    </a>
-  </div>
-
-
-<!--/////////////////////////////////////////////////-->
-<!-- Footer -->
-<!--/////////////////////////////////////////////////-->
-
-<footer class="w3-center w3-black w3-padding-64 w3-hover-opacity-off">
-  <div class="w3-xlarge w3-section">
-    <a target="_blank" href="https://www.facebook.com/pg/Muebles-y-Proyectos-especiales-523828670967910/photos/?ref=page_internal"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <a target="_blank" href="https://servicio.mercadolibre.com.ar/MLA-761425541-entrepisos-de-madera-_JM">
-    <i class="fa fa-handshake-o w3-hover-opacity"></i></a>
-    <a target="_blank" href="https://twitter.com/TuEntrepiso">
-    <i class="fa fa-twitter w3-hover-opacity"></i></a>
-  </div>
-  <a href="index#home primary" class="btn  w3-button w3-light-grey">
-<i class="fa fa-home "></i>Tu Entrepiso</a>
-  <p> Copyright © MueblesYProyectosEspeciales 2018. </p><p>  Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-
-<!--/////////////////////////////////////////////////-->
-<!-- Footer -->
-<!--/////////////////////////////////////////////////-->
-
-
-
-
+   <!--///////////////////////////////////////////////////////-->
+   <!--Footer selection-->
+   <div id="includedFooterContent"></div>
+   <!--Footer selection-->
+   <!--///////////////////////////////////////////////////////-->
 
 
 
@@ -767,7 +725,6 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
 
 
-</footer>
  
 <!-- Add Google Maps -->
 <script>
