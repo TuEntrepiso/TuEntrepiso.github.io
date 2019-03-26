@@ -55,7 +55,9 @@ var alts = ["Imagen de entrepiso de madera y hierro en Capital Federal (CABA)",
 // Modal Image Gallery
 function showImgModal(element) {
 // document.getElementById("img01").src = element.src;
-    document.getElementById("img01").src = "fotosBKP/Entrepiso_" + element.getAttribute('index') + ".jpg";
+
+    var index=element.getAttribute('index')!==undefined ? element.getAttribute('index'): 1;
+    document.getElementById("img01").src = "fotosBKP/Entrepiso_" + index + ".jpg";
     document.getElementById("modal01").style.display = "block";
 //  var captionText = document.getElementById("caption");
 //  captionText.innerHTML = element.alt;
@@ -65,13 +67,17 @@ function showImgModal(element) {
     $("#html").css('overflow-y', "hidden");
 
     history.pushState({page: 1}, "title 2", "?page="+index+"#");
+    console.log("back added");
 }
 
 
 function hideImgModal() {
-    $('#modal01').hide()
-    $("#html").css('overflow-y', "scroll");
-    history.back();
+    let myModal = $('#modal01');
+    if (myModal.is(':visible')) {
+        myModal.hide();
+        $("#html").css('overflow-y', "scroll");
+        history.back();
+    }
 }
 
 
@@ -166,7 +172,7 @@ $(document).keydown(function (event) {
         right();
     }
     if (event.keyCode == 27) {
-        $('#modal01').hide()
+        hideImgModal();
     }
 });
 
@@ -177,7 +183,7 @@ $(function(){
     $("#includedFooterContent").load("layout/footer-floatbtns.html", function() {
         // ICONS
 
-// Remove entrance cool Effect
+        // Remove entrance cool Effect
         var element =  document.querySelector('.float.fb');
         element.addEventListener('animationend', function() {
             element.classList.remove('animated', 'zoomInUp');
@@ -193,11 +199,6 @@ $(function(){
 // replace href with #123 if present
 $(document).ready(function () {
 
-
-
-
-
-
     if (window.location.href.includes("#123")) {
         var allHref = $("a[href^='https://tuentrepiso.github.io']");
         allHref.each(function () {
@@ -206,4 +207,9 @@ $(document).ready(function () {
             }
         );
     }
+
+    // Replace source
+    $('img').on("error", function() {
+        $(this).attr('src', 'fotos/no_image.jpg');
+    });
 });

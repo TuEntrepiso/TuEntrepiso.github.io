@@ -11,8 +11,9 @@ var MAX_ONSMALL_ELEMENTS = 4;
 loadImgs(1, FIRST_ELEMENTS);
 
 window.onpopstate = function(event) {
-    if (!$('#modal01').hidden) {
-        $('#modal01').hide();
+    let imgModal = $('#modal01');
+    if (!imgModal.hidden) {
+        imgModal.hide();
         $("#html").css('overflow-y', "scroll");
     }
 };

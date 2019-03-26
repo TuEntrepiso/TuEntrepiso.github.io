@@ -86,7 +86,7 @@ function generateQuestionsAnswers(text) {
 
     var clone = $.extend(true, [], questionsAnswers);
 
-    if (text != null && text != undefined && text != "") {
+    if (text != null && text != undefined && text !== "") {
 
         //var allWords = text.split(" ");
         clone = clone.filter(function (replacement) {
