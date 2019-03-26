@@ -1,6 +1,12 @@
 
 $(function(){
     $("#includedContent").load("opiniones-preview.html");
+    let ourHistoryBtn = $(".ourHistoryBtn");
+    ourHistoryBtn.click(function () {
+        $("#ourHistory").get(0).classList.toggle("w3-hide");
+        ourHistoryBtn.get(0).classList.toggle("w3-card");
+        ourHistoryBtn.get(0).classList.toggle("w3-btn");
+    });
 });
 
 var MAX_ELEMENTS = 8;
