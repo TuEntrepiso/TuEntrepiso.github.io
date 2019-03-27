@@ -6,6 +6,8 @@ $(function(){
         $("#ourHistory").get(0).classList.toggle("w3-hide");
         ourHistoryBtn.get(0).classList.toggle("w3-card");
         ourHistoryBtn.get(0).classList.toggle("w3-btn");
+        
+        $(".ourHistoryBtn i").get(0).classList.toggle("w3-hide");
     });
 });
 
