@@ -176,6 +176,29 @@ $(document).keydown(function (event) {
     }
 });
 
+// questions
+
+function showOrHideAskOptions() {
+    $('.ask-options').get(0).classList.toggle('w3-hide');
+    $('.ask-btn').get(0).classList.toggle('w3-hide');
+}
+
+function sendQuestion(sendOptionFlag) {
+    let inputText = $("#compose-question").val();
+    let isWpp = sendOptionFlag === 'W';
+
+    let href = isWpp ? "https://wa.me/5491161457082?text=" : "mailto:mueblesyproyectosespeciales@hotmail.com?subject=TuEntrepiso%20-%20Quería%20solicitar%20un%20presupuesto&body=";
+
+    var a = document.createElement('a');
+    var linkText = document.createTextNode("my title text");
+    a.appendChild(linkText);
+    if (isWpp) a.target = "_blank";
+    a.title = "Enviar";
+    a.href = href + inputText;
+    a.rel = "noreferrer";
+    a.click();
+    showOrHideAskOptions();
+}
 
 // Footer
 
