@@ -7,7 +7,8 @@ var MAX_ONSMALL_ELEMENTS = MAX_ELEMENTS;
 loadImgs(1, FIRST_ELEMENTS);
 
 window.onpopstate = function(event) {
-    if (!$('#modal01').hidden) {
+    let imgModal = $('#modal01');
+    if (!imgModal.hidden) {
         $('#modal01').hide();
         $("#html").css('overflow-y', "scroll");
     }
