@@ -2,7 +2,7 @@ function getAndroidVersion(r){var n=(r=(r||navigator.userAgent).toLowerCase()).m
 //not track me
 var url_string = window.location.href;
 function itIsNotMe() {
-    return url_string.search("#123") == -1 && getAndroidVersion() != "4.3" && screen.height!=616 ;
+    return url_string.search("#123") == -1 && getAndroidVersion() != "4.3" && screen.height != undefined && screen.height!=616;
 }
 
 if ( itIsNotMe() ) {
