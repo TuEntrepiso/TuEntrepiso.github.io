@@ -1,4 +1,5 @@
 
+let rotated = false;
 $(function(){
     $("#includedContent").load("layout/opiniones-preview.html");
     let ourHistoryBtn = $(".ourHistoryBtn");
@@ -6,8 +7,13 @@ $(function(){
         $("#ourHistory").get(0).classList.toggle("w3-hide");
        // ourHistoryBtn.get(0).classList.toggle("w3-card");
        // ourHistoryBtn.get(0).classList.toggle("w3-btn");
-        
-        $(".ourHistoryBtn i").get(0).classList.toggle("w3-hide");
+
+        $(".ourHistoryBtn i").css({
+            "transform": "rotate("+45*!rotated+"deg)",
+            "transition": "all 0.5s ease",
+            "padding-left": 3*!rotated+"px"
+        });
+        rotated=!rotated;
     });
 });
 

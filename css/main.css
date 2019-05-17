@@ -327,6 +327,14 @@ body, html {
     box-shadow: 2px 2px 9px 2px #999;
 }
 
+.primaryDarkFabicon {
+    background-color: #033c68 !important;
+    color: #fff !important;
+    box-shadow: 2px 2px 9px 2px #3c3c3c;
+    border-radius: 50px;
+    width: 35px;
+}
+
 /*  FAB ICON   */
 
 /*box-shadow: 2px 2px 3px #999;*/
@@ -354,6 +362,17 @@ body, html {
     text-align: center;
     box-shadow: 2px 2px 3px #999;
 }
+
+.ourHistoryBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ourHistoryBtn i{
+    font-size: 35px;
+}
+
+
 
 .plus {
     margin-top: 7px;
