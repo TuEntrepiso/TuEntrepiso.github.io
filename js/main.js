@@ -54,6 +54,9 @@ var alts = ["Imagen de entrepiso de madera y hierro en Capital Federal (CABA)",
 
 // Modal Image Gallery
 function showImgModal(element) {
+    let myModal = $('#modal01');
+    if (myModal.is(':visible')) return;
+
 // document.getElementById("img01").src = element.src;
 
     var index=element.getAttribute('index')!==undefined ? element.getAttribute('index'): 1;

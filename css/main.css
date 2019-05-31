@@ -290,6 +290,12 @@ body, html {
     text-shadow: 0px -2px 10px #000000;
 }
 
+#caption{
+    color: white;
+}
+#caption a{
+    color: white;
+}
 .w3-wide {
     letter-spacing: 10px;
 }
