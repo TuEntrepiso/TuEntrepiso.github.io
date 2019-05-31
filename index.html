@@ -458,12 +458,33 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
             </strong>
 
       </p>
-        <!--meli selection-->
+
+
+      <!-- Preguntar -->
+      <div id="opinion-container" class="w3-modal-content animated zoomInUp w3-center w3-transparent w3-padding-16">
+        <h3>
+          Dejanos tu opinión
+        </h3>
+        <div class="w3-row" style="margin:0 -16px 8px -16px">
+          <div class="w3-col m10 w3-padding-large">
+            <!-- Whitelisted and record any keystroke data typed in input fields in HOTJAR -->
+            <input id="compose-opinion" class="w3-input w3-border" type="text" placeholder="Escribí una pregunta, comentario o sugerencia"
+                   title="Escribí una pregunta" required data-hj-whitelist name="Name">
+          </div>
+          <div class="w3-col m2 w3-padding-large">
+            <button class="w3-button primary ask-btn" type="button"
+                    onclick="sendOpinion();">
+              <i class="fa fa-paper-plane"></i> Enviar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--meli selection-->
         <!--///////////////////////////////////////////////////////-->
       <div id="includedContent"></div>
       <!--meli selection-->
       <!--///////////////////////////////////////////////////////-->
-
 
     </div>
 </div>
@@ -571,7 +592,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
   </div>
 </div>
-
+   <div class="snackbar primaryDarkFabicon" id="general-snackbar">...</div>
   <div class="snackbar" id="mail-snackbar">Mail Enviado</div>
   <div class="snackbar" id="wpp-snackbar">Solicitá presupuesto llamando al Teléfono: 11 6145-7082</div>
 

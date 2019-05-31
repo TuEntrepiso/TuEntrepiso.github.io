@@ -179,6 +179,14 @@ $(document).keydown(function (event) {
     }
 });
 
+function showSnackbar(text)
+{
+    var x = document.getElementById("general-snackbar");
+    x.className = x.className+" show";
+    x.innerText=text;
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
 // questions
 
 function showOrHideAskOptions() {

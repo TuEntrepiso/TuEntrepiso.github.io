@@ -31,3 +31,12 @@ window.onpopstate = function(event) {
         $("#html").css('overflow-y', "scroll");
     }
 };
+
+function sendOpinion() {
+    let opinionInput = $("#compose-opinion");
+    if (opinionInput.val()) {
+        showSnackbar('Enviado');
+        opinionInput.attr('disabled', true);
+        $("#opinion-container .ask-btn").get(0).classList.toggle("w3-hide");
+    }
+}
