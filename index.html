@@ -592,7 +592,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
   </div>
 </div>
-   <div class="snackbar primaryDarkFabicon" id="general-snackbar">...</div>
+
   <div class="snackbar" id="mail-snackbar">Mail Enviado</div>
   <div class="snackbar" id="wpp-snackbar">Solicitá presupuesto llamando al Teléfono: 11 6145-7082</div>
 
@@ -777,45 +777,40 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
 // Add Google gmail api 
 
-function sendEmail()
-{
+function sendEmail() {
   $('#send-button').addClass('disabled');
-  let subject = 'TuEntrepiso - '+$('#compose-subject').val();
-  let msg = $('#compose-to').val()+' - '+$('#compose-message').val();
+  let subject = 'TuEntrepiso - ' + $('#compose-subject').val();
+  let msg = $('#compose-to').val() + ' - ' + $('#compose-message').val();
   sendMessage(
-    {
-      'To': 'mueblesyproyectosespeciales@hotmail.com',
-      'Subject': subject
-    },
-    msg,
-    composeTidy
+          {
+            'To': 'mueblesyproyectosespeciales@hotmail.com',
+            'Subject': subject
+          },
+          msg,
+          composeTidy
   );
-
   return false;
 }
 
-function composeTidy()
-{
-	document.getElementById('modalmail').style.display='none'; 
-	document.getElementById('authorize_button').style.display='block'; 
- 	var x = document.getElementById("mail-snackbar");
-    x.className = x.className+" show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+function composeTidy() {
+  document.getElementById('modalmail').style.display = 'none';
+  document.getElementById('authorize_button').style.display = 'block';
+  var x = document.getElementById("mail-snackbar");
+  x.className = x.className + " show";
+  setTimeout(function () {
+    x.className = x.className.replace("show", "");
+  }, 3000);
 }
 
-function showWpp()
-{
-  var x = document.getElementById("wpp-snackbar");
-    x.className = x.className+" show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+function showWpp() {
+  showSnackbar("Solicitá presupuesto llamando al Teléfono: 11 6145-7082");
 }
 
-function sendMessage(headers_obj, message, callback)
-{
+function sendMessage(headers_obj, message, callback) {
   var email = '';
 
-  for(var header in headers_obj)
-    email += header += ": "+headers_obj[header]+"\r\n";
+  for (var header in headers_obj)
+    email += header += ": " + headers_obj[header] + "\r\n";
 
   email += "\r\n" + message;
 
