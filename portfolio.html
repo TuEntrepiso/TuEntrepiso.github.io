@@ -199,10 +199,10 @@
         </span>
       </button>
     <a href="https://tuentrepiso.github.io/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Tu Entrepiso</a>
-    <a href="index#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-    <a href="index#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> QUIENES SOMOS</a>
-    <a href="index#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACTO</a>
-   <a href="index#contact" class="w3-bar-item w3-button w3-hide-small w3-right">
+    <a href="https://tuentrepiso.github.io/#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="https://tuentrepiso.github.io/#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> QUIENES SOMOS</a>
+    <a href="https://tuentrepiso.github.io/#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACTO</a>
+   <a href="https://tuentrepiso.github.io/#contact" class="w3-bar-item w3-button w3-hide-small w3-right">
       Solicitá Presupuesto
       <i class="fa fa-phone fa-fw w3-hover-text-black"  style="font-size:20px" ></i>
       <strong>
@@ -212,9 +212,9 @@
 
   <!-- Navbar on small screens -->
      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-animate-rightzoom w3-card-4">
-      <a href="#about" class="w3-bar-item w3-button " onclick="toggleFunction()">QUIENES SOMOS</a>
-      <a href="#portfolio" class="w3-bar-item w3-button " onclick="toggleFunction()">PORTFOLIO</a>
-      <a href="#contact" class="w3-bar-item w3-button " onclick="toggleFunction()">CONTACTO</a>
+      <a href="https://tuentrepiso.github.io/#about" class="w3-bar-item w3-button " onclick="toggleFunction()">QUIENES SOMOS</a>
+      <a href="https://tuentrepiso.github.io/#portfolio" class="w3-bar-item w3-button " onclick="toggleFunction()">PORTFOLIO</a>
+      <a href="https://tuentrepiso.github.io/#contact" class="w3-bar-item w3-button " onclick="toggleFunction()">CONTACTO</a>
     </div>
 </div>
 
@@ -254,12 +254,12 @@
 
 <div id="imgContainter" class="w3-center">
 
-    <div hidden="true" id="templateContainer" class="w3-col m3">
+    <div hidden id="templateContainer" class="w3-col m3">
     </div>
-    <img hidden="true" id="template"  style="width:100%"
-         class="portfolio-img w3-hover-shadow"
-         title="Imagen de entrepiso de madera y hierro en Capital Federal CABA Lomas de Zamora Banfield Lanus escalada"
-         alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)">
+    <img alt="Imagen de entrepiso de madera y hierro en Capital Federal (CABA)" class="portfolio-img w3-hover-shadow animated zoomInDown" hidden
+         id="template"
+         style="width:100%"
+         title="Imagen de entrepiso de madera y hierro en Capital Federal CABA Lomas de Zamora Banfield Lanus escalada" src="fotos/no_image.jpg">
     
     <div hidden="true" id="hovereContainer" class="hovereffect" onclick="showImgModal(this)">
             <div class="overlay">
@@ -332,7 +332,7 @@
 
       <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent "
            onclick="hideImgModal();">
-          <img id="img01" class="myp-image " alt="Imagen seleccionada" >
+          <img id="img01" class="myp-image " alt="Imagen seleccionada"  src="fotos/no_image.jpg">
           <p id="caption" class="w3-opacity w3-large"></p>
       </div>
 
