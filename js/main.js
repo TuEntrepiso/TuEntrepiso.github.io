@@ -192,6 +192,12 @@ function showSnackbar(text)
 function showOrHideAskOptions() {
     $('.ask-options').get(0).classList.toggle('w3-hide');
     $('.ask-btn').get(0).classList.toggle('w3-hide');
+
+    let opinionInput = $("#compose-question");
+    opinionInput.get(0).classList.toggle("w3-hide");
+    let opinionText = $("#compose-text");
+    opinionText.empty();
+    opinionText.append(opinionInput.val());
 }
 
 function sendQuestion(sendOptionFlag) {

@@ -38,5 +38,7 @@ function sendOpinion() {
         showSnackbar('Enviado');
         opinionInput.attr('disabled', true);
         $("#opinion-container .ask-btn").get(0).classList.toggle("w3-hide");
+        opinionInput.get(0).classList.toggle("w3-hide");
+        $("#compose-text").append(opinionInput.val());
     }
 }
