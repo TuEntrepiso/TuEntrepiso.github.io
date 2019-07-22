@@ -1,0 +1,35 @@
+<div class="w3-modal-content animated zoomInUp w3-center w3-transparent w3-padding-16">
+      <h2>
+          Realizar pregunta
+      </h2>
+      <!--MAIL-->
+      <div class="w3-row" style="margin:0 -16px 8px -16px">
+          <div class="w3-col m10 w3-padding-large">
+              <!-- Whitelisted and record any keystroke data typed in input fields in HOTJAR -->
+              <input id="compose-question" class="w3-input w3-border" type="text" placeholder="Escribí una pregunta"
+                     title="Escribí una pregunta" required data-hj-whitelist name="Name">
+              <div id="compose-text" class="w3-text-gray w3-center"></div>
+
+          </div>
+          <div class="w3-col m2 w3-padding-large">
+              <button class="w3-button primary ask-btn" type="button"
+                      onclick="showOrHideAskOptions();">
+                  <i class="fa fa-paper-plane"></i> Preguntar
+              </button>
+          </div>
+      </div>
+      <div class=" w3-hide ask-options w3-row animated fadeInDown">
+          <div class="w3-col m4 w3-padding-large">
+              ¿Como desea realizar la consulta?
+          </div>
+          <div class="w3-col m4  ">
+              <button class="w3-button primary" type="button" title="Al Whatsapp" onclick="sendQuestion('W')">
+                  <i class="fa fa-whatsapp" style="font-size:48px"></i>
+              </button>
+              <button class="w3-button primary " type="button" title="Por mail" onclick="sendQuestion('M')">
+                  <i class="material-icons" style="font-size:41px">mail</i>
+              </button>
+          </div>
+      </div>
+
+  </div>
